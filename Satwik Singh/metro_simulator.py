@@ -1,6 +1,6 @@
 metdata = []
 try:
-    with open(r"C:\Users\LENOVO\Desktop\college\metro_data.txt","r") as file:
+    with open(r"metro_data.txt","r") as file:
         next(file)
         for line in file:
             line = line.strip()

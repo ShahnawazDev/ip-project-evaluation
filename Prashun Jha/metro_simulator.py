@@ -1,4 +1,4 @@
-f = open("/Users/prashunjha/Downloads/delhi_metro/metro_data.txt", "r")
+f = open("metro_data.txt", "r")
 lines = f.readlines()
 f.close()
 

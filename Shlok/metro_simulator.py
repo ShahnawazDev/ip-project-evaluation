@@ -1,6 +1,6 @@
 G = []
 
-f = open("C:/Users/ASUS/Downloads/metro_data.txt")
+f = open("metro_data.txt")
 lines = f.readlines()
 f.close()
 
