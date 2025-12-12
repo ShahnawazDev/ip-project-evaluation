@@ -1,0 +1,85 @@
+DELHI METRO DATA:BLUE LINE
+
+Station                     Next Station            Time(min)     Interchange
+-------------------------------------------------------------------------------
+Dwarka Sector 21            Dwarka Sector 8             2            No
+Dwarka Sector 8             Dwarka Sector 9             2            No
+Dwarka Sector 9             Dwarka Sector 10            2            No
+Dwarka Sector 10            Dwarka Sector 11            2            No
+Dwarka Sector 11            Dwarka Sector 12            2            No
+Dwarka Sector 12            Dwarka Sector 13            2            No
+Dwarka Sector 13            Dwarka Sector 14            2            No
+Dwarka Sector 14            Dwarka                      2            No
+Dwarka                      Dwarka Mor                  3            No
+Dwarka Mor                  Nawada                      2            No
+Nawada                      Uttam Nagar West            3            No
+Uttam Nagar West            Uttam Nagar East            2            No
+Uttam Nagar East            Janakpuri West              3            No
+Janakpuri West              Janakpuri East              2            No
+Janakpuri East              Tilak Nagar                 3            No
+Tilak Nagar                 Subhash Nagar               2            No
+Subhash Nagar               Tagore Garden               2            No
+Tagore Garden               Rajouri Garden              2            No
+Rajouri Garden              Ramesh Nagar                2            No
+Ramesh Nagar                Moti Nagar                  2            No
+Moti Nagar                  Kirti Nagar                 2            No
+Kirti Nagar                 Shadipur                    2            No
+Shadipur                    Patel Nagar                 2            No
+Patel Nagar                 Rajendra Place              2            No
+Rajendra Place              Karol Bagh                  2            No
+Karol Bagh                  Jhandewalan                 2            No
+Jhandewalan                 R K Ashram Marg             2            No
+R K Ashram Marg             Rajiv Chowk                 2            Yes
+Rajiv Chowk                 Barakhamba Road             2            No
+Barakhamba Road             Mandi House                 2            Yes
+Mandi House                 Supreme Court               2            No
+Supreme Court               Indraprastha                2            No
+Indraprastha                Yamuna Bank                 3            No
+Yamuna Bank                 Akshardham                  2            No
+Akshardham                  Mayur Vihar Phase 1         3            No
+Mayur Vihar Phase 1         Mayur Vihar Extension       2            No
+Mayur Vihar Extension       New Ashok Nagar             2            No
+New Ashok Nagar             Noida Sector 15             3            No
+Noida Sector 15             Noida Sector 16             2            No
+Noida Sector 16             Noida Sector 18             2            No
+Noida Sector 18             Botanical Garden            3            Yes
+Botanical Garden            Golf Course                 2            No
+Golf Course                 Noida City Centre           3            No
+Noida City Centre           Noida Sector 34             2            No
+Noida Sector 34             Noida Sector 52             3            No
+Noida Sector 52             Noida Sector 61             2            No
+Noida Sector 61             Noida Sector 59             2            No
+Noida Sector 59             Noida Sector 62             2            No
+Noida Sector 62             Noida Electronic City       2            No
+----------------------------------------------------------------------------
+
+
+
+                        DELHI METRO DATA:MAGENTA LINE
+
+Station                         Next Station                     Time(min)     Interchange
+---------------------------------------------------------------------------------------------
+Janakpuri West                  Dabri Mor – Janakpuri South        3            Yes
+Dabri Mor – Janakpuri South     Dashrathpuri                       2            No
+Dashrathpuri                     Palam                             2            No
+Palam                            Sadar Bazaar Cantonment           2            No
+Sadar Bazaar Cantonment          Terminal 1 – IGI Airport          3            No
+Terminal 1 – IGI Airport         Shankar Vihar                     2            No
+Shankar Vihar                    Vasant Vihar                      2            No
+Vasant Vihar                     Munirka                           2            No
+Munirka                          R.K. Puram                        2            No
+R.K. Puram                       IIT Delhi                         2            No
+IIT Delhi                        Hauz Khas                         3            Yes
+Hauz Khas                        Panchsheel Park                   2            No
+Panchsheel Park                  Chirag Delhi                      2            No
+Chirag Delhi                      Greater Kailash                  2            No
+Greater Kailash                  Nehru Enclave                     2            No
+Nehru Enclave                     Kalkaji Mandir                   2            Yes
+Kalkaji Mandir                    Okhla NSIC                       2            No
+Okhla NSIC                        Sukhdev Vihar                    2            No
+Sukhdev Vihar                     Jamia Millia Islamia             2            No
+Jamia Millia Islamia              Okhla Vihar                      2            No
+Okhla Vihar                        Jasola Vihar / Shaheen Bagh     2            No
+Jasola Vihar / Shaheen Bagh       Kalindi Kunj                     2            No
+Kalindi Kunj                       Okhla Bird Sanctuary            2            No
+Okhla Bird Sanctuary               Botanical Garden                2            Yes

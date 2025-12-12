@@ -1,0 +1,145 @@
+Red,Rithala,Rohini West,2,No
+Red,Rohini West,Rohini East,3,No
+Red,Rohini East,Pitampura,1,No
+Red,Pitampura,Kohat Enclave,4,No
+Red,Kohat Enclave,Netaji Subhash Place,2,No
+Red,Netaji Subhash Place,Keshav Puram,2,No
+Red,Keshav Puram,Kanhaiya Nagar,3,No
+Red,Kanhaiya Nagar,Inderlok,2,Yes
+Red,Inderlok,Shastri Nagar,2,No
+Red,Shastri Nagar,Pratap Nagar,4,No
+Red,Pratap Nagar,Pul Bangash,2,No
+Red,Pul Bangash,Tis Hazari,4,No
+Red,Tis Hazari,Kashmere Gate,3,No
+Red,Kashmere Gate,Shastri Park,4,No
+Red,Shastri Park,Seelampur,2,No
+Red,Seelampur,Welcome,1,No
+Red,Welcome,Shahdara,2,No
+Red,Shahdara,Mansarovar Park,1,No
+Red,Mansarovar Park,Jhilmil,3,No
+Red,Jhilmil,Dilshad Garden,2,No
+Red,Dilshad Garden,Shahid Nagar,2,No
+Red,Shahid Nagar,Raj Bagh,3,No
+Red,Raj Bagh,Major Mohit Sharma,2,No
+Red,Major Mohit Sharma,Shyam Park,2,No
+Red,Shyam Park,Mohan Nagar,4,No
+Red,Mohan Nagar,Arthala,2,No
+Red,Arthala,Hindon River,1,No
+Red,Hindon River,Shaheed Sthal,2,No
+
+Blue,Dwarka Sector 21,Dwarka Sector 8,3,No
+Blue,Dwarka Sector 8,Dwarka Sector 9,2,No
+Blue,Dwarka Sector 9,Dwarka Sector 10,1,No
+Blue,Dwarka Sector 10,Dwarka Sector 11,2,No
+Blue,Dwarka Sector 11,Dwarka Sector 12,2,No
+Blue,Dwarka Sector 12,Dwarka Sector 13,3,No
+Blue,Dwarka Sector 13,Dwarka Sector 14,2,No
+Blue,Dwarka Sector 14,Dwarka,2,No
+Blue,Dwarka,Dwarka Mor,3,No
+Blue,Dwarka Mor,Nawada,2,No
+Blue,Nawada,Uttam Nagar West,2,No
+Blue,Uttam Nagar West,Uttam Nagar East,2,No
+Blue,Uttam Nagar East,Janakpuri West,2,Yes
+Blue,Janakpuri West,Janakpuri East,4,No
+Blue,Janakpuri East,Tilak Nagar,2,No
+Blue,Tilak Nagar,Subhash Nagar,2,No
+Blue,Subhash Nagar,Tagore Garden,3,No
+Blue,Tagore Garden,Rajouri Garden,2,No
+Blue,Rajouri Garden,Ramesh Nagar,2,No
+Blue,Ramesh Nagar,Moti Nagar,4,No
+Blue,Moti Nagar,Kirti Nagar,2,Yes
+Blue,Kirti Nagar,Shadipur,3,No
+Blue,Shadipur,Patel Nagar,2,No
+Blue,Patel Nagar,Rajendra Place,3,No
+Blue,Rajendra Place,Karol Bagh,3,No
+Blue,Karol Bagh,Jhandewalan,2,No
+Blue,Jhandewalan,RK Ashram Marg,1,No
+Blue,RK Ashram Marg,Rajiv Chowk,2,No
+Blue,Rajiv Chowk,Barakhamba Road,1,No
+Blue,Barakhamba Road,Mandi House,2,No
+Blue,Mandi House,Supreme Court,2,No
+Blue,Supreme Court,Indraprastha,1,No
+Blue,Indraprastha,Yamuna Bank,3,No
+Blue,Yamuna Bank,Akshardham,3,No
+Blue,Akshardham,Mayur Vihar 1,3,No
+Blue,Mayur Vihar 1,Mayur Vihar Ext,2,No
+Blue,Mayur Vihar Ext,New Ashok Nagar,5,No
+Blue,New Ashok Nagar,Noida Sector 15,2,No
+Blue,Noida Sector 15,Noida Sector 16,3,No
+Blue,Noida Sector 16,Noida Sector 18,2,No
+Blue,Noida Sector 18,Botanical Garden,1,Yes
+Blue,Botanical Garden,Golf Course,2,No
+Blue,Golf Course,Noida City Centre,3,No
+Blue,Noida City Centre,Noida Sector 34,2,No
+Blue,Noida Sector 34,Noida Sector 52,3,No
+Blue,Noida Sector 52,Noida Sector 61,2,No
+Blue,Noida Sector 61,Noida Sector 59,1,No
+Blue,Noida Sector 59,Noida Sector 62,3,No
+Blue,Noida Sector 62,Noida Electronic City,2,No
+
+Blue1,Yamuna Bank,Laxmi Nagar,3,Yes
+Blue1,Laxmi Nagar,Nirman Vihar,2,No
+Blue1,Nirman Vihar,Preet Vihar,1,No
+Blue1,Preet Vihar,Karkarduma,4,No
+Blue1,Karkarduma,Anand Vihar ISBT,2,No
+Blue1,Anand Vihar ISBT,Kaushambi,3,No
+Blue1,Kaushambi,Vaishali,1,No
+Blue1,Vaishali,END,0,No
+
+Magenta,Janakpuri West,Dabri Mor,3,Yes
+Magenta,Dabri Mor,Dashrath Puri,2,No
+Magenta,Dashrath Puri,Palam,2,No
+Magenta,Palam,Sadar Bazaar Cantt,3,No
+Magenta,Sadar Bazaar Cantt,Terminal 1 IGI,3,No
+Magenta,Terminal 1 IGI,Shankar Vihar,3,No
+Magenta,Shankar Vihar,Vasant Vihar,3,No
+Magenta,Vasant Vihar,Munirka,3,No
+Magenta,Munirka,RK Puram,2,No
+Magenta,RK Puram,IIT,3,No
+Magenta,IIT,Hauz Khas,2,No
+Magenta,Hauz Khas,Panchsheel Park,1,No
+Magenta,Panchsheel Park,Chirag Delhi,2,No
+Magenta,Chirag Delhi,Greater Kailash,3,No
+Magenta,Greater Kailash,Nehru Enclave,2,No
+Magenta,Nehru Enclave,Kalkaji Mandir,1,No
+Magenta,Kalkaji Mandir,Okhla NSIC,5,No
+Magenta,Okhla NSIC,Sukhdev Vihar,2,No
+Magenta,Sukhdev Vihar,Jamia Millia Islamia,2,No
+Magenta,Jamia Millia Islamia,END,0,No
+Yellow,Samaypur Badli,Rohini Sector 18-19,3,No
+Yellow,Rohini Sector 18-19,Haiderpur Badli Mor,2,No
+Yellow,Haiderpur Badli Mor,Jahangirpuri,2,No
+Yellow,Jahangirpuri,Adarsh Nagar,4,No
+Yellow,Adarsh Nagar,Azadpur,5,Yes
+Yellow,Azadpur,Model Town,4,No
+Yellow,Model Town,GTB Nagar,2,No
+Yellow,GTB Nagar,Vishwavidyalaya,3,Yes
+Yellow,Vishwavidyalaya,Vidhan Sabha,2,No
+Yellow,Vidhan Sabha,Civil Lines,2,No
+Yellow,Civil Lines,Kashmere Gate,1,Yes
+Yellow,Kashmere Gate,Chandni Chowk,2,No
+Yellow,Chandni Chowk,Chawri Bazar,3,No
+Yellow,Chawri Bazar,New Delhi,2,Yes
+Yellow,New Delhi,Rajiv Chowk,3,Yes
+Yellow,Rajiv Chowk,Patel Chowk,3,No
+Yellow,Patel Chowk,Central Secretariat,2,Yes
+Yellow,Central Secretariat,Udyog Bhawan,3,No
+Yellow,Udyog Bhawan,Lok Kalyan Marg,5,No
+Yellow,Lok Kalyan Marg,Jor Bagh,2,No
+Yellow,Jor Bagh,INA,2,Yes
+Yellow,INA,AIIMS,2,No
+Yellow,AIIMS,Green Park,5,No
+Yellow,Green Park,Hauz Khas,2,Yes
+Yellow,Hauz Khas,Malviya Nagar,2,No
+Yellow,Malviya Nagar,Saket,2,No
+Yellow,Saket,Qutub Minar, 3,No
+Yellow,Qutub Minar,Chhattarpur,2,No
+Yellow,Chhattarpur,Sultanpur,2,No
+Yellow,Sultanpur,Ghitorni,5,No
+Yellow,Ghitorni,Arjan Garh,2,No
+Yellow,Arjan Garh,Guru Dronacharya,5,No
+Yellow,Guru Dronacharya,Sikandarpur,2,Yes
+Yellow,Sikandarpur,MG Road,3,No
+Yellow,MG Road,IFFCO Chowk,1,No
+Yellow,IFFCO Chowk,HUDA City Centre,2,No
+Yellow,HUDA City Centre,END,0,No

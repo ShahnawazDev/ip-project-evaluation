@@ -1,0 +1,176 @@
+[MAGENTA LINE (Janakpuri West -> Botanical Garden)]
+Janakpuri West
+Dabri Mor - Janakpuri South
+Dashrathpur
+Palam
+Sadar Bazar Cantonment
+Terminal-1 IGI Airport
+Shankar Vihar
+Munirka
+R.K. Puram
+IIT Delhi
+Hauz Khas
+Panchsheel Park
+Chirag Delhi
+Greater Kailash
+Nehru Enclave
+Kalkaji Mandir
+Okhla NSIC
+Sukhdev Vihar
+Jamia Millia Islamia
+Okhla Vihar
+Jasola Vihar Shaheen Bagh
+Kalindi Kunj
+Okhla Bird Sanctuary
+Botanical Garden
+
+[MAGENTA LINE (Botanical Garden -> Janakpuri West)]
+Botanical Garden
+Okhla Bird Sanctuary
+Kalindi Kunj
+Jasola Vihar Shaheen Bagh
+Okhla Vihar
+Jamia Millia Islamia
+Sukhdev Vihar
+Okhla NSIC
+Kalkaji Mandir
+Nehru Enclave
+Greater Kailash
+Chirag Delhi
+Panchsheel Park
+Hauz Khas
+IIT Delhi
+R.K. Puram
+Munirka
+Shankar Vihar
+Terminal-1 IGI Airport
+Sadar Bazar Cantonment
+Palam
+Dashrathpur
+Dabri Mor - Janakpuri South
+Janakpuri West
+
+[BLUE LINE (Dwarka Sector 21 -> Noida Electronic City)]
+Dwarka Sector-21
+Dwarka Sector-8
+Dwarka Sector-9
+Dwarka Sector-10
+Dwarka Sector-11
+Dwarka Sector-12
+Dwarka Sector-13
+Dwarka Sector-14
+Dwarka
+Dwarka Mor
+Nawada
+Uttam Nagar West
+Uttam Nagar East
+Janakpuri West
+Janakpuri East
+Tilak Nagar
+Subhash Nagar
+Tagore Garden
+Rajouri Garden
+Ramesh Nagar
+Moti Nagar
+Kirti Nagar
+Shadipur
+Patel Nagar
+Rajendra Place
+Karol Bagh
+Jhandewalan
+Ramakrishna Ashram Marg
+Rajiv Chowk
+Barakhamba Road
+Mandi House
+Supreme Court
+Indraprastha
+Yamuna Bank
+Akshardham
+Mayur Vihar-1
+Mayur Vihar Extension
+New Ashok Nagar
+Noida Sector-15
+Noida Sector-16
+Noida Sector-18
+Botanical Garden
+Golf Course
+Noida City Centre
+Sector-34 Noida
+Sector-52 Noida
+Sector-61 Noida
+Sector-59 Noida
+Sector-62 Noida
+Noida Electronic City
+
+[BLUE LINE (Noida Electronic City -> Dwarka Sector 21)]
+Noida Electronic City
+Sector-62 Noida
+Sector-59 Noida
+Sector-61 Noida
+Sector-52 Noida
+Sector-34 Noida
+Noida City Centre
+Golf Course
+Botanical Garden
+Noida Sector-18
+Noida Sector-16
+Noida Sector-15
+New Ashok Nagar
+Mayur Vihar Extension
+Mayur Vihar-1
+Akshardham
+Yamuna Bank
+Indraprastha
+Supreme Court
+Mandi House
+Barakhamba Road
+Rajiv Chowk
+Ramakrishna Ashram Marg
+Jhandewalan
+Karol Bagh
+Rajendra Place
+Patel Nagar
+Shadipur
+Kirti Nagar
+Moti Nagar
+Ramesh Nagar
+Rajouri Garden
+Tagore Garden
+Subhash Nagar
+Tilak Nagar
+Janakpuri East
+Janakpuri West
+Uttam Nagar East
+Uttam Nagar West
+Nawada
+Dwarka Mor
+Dwarka
+Dwarka Sector-14
+Dwarka Sector-13
+Dwarka Sector-12
+Dwarka Sector-11
+Dwarka Sector-10
+Dwarka Sector-9
+Dwarka Sector-8
+Dwarka Sector-21
+
+[BLUE LINE 2 (Yamuna Bank -> Vaishali)]
+Yamuna Bank
+Laxmi Nagar
+Nirman Vihar
+Preet Vihar
+Karkarduma
+Anand Vihar ISBT
+Kaushambi
+Vaishali
+
+[BLUE LINE 2 (Vaishali -> Yamuna Bank)]
+Vaishali
+Kaushambi
+Anand Vihar ISBT
+Karkarduma
+Preet Vihar
+Nirman Vihar
+Laxmi Nagar
+Yamuna Bank
+ metro_data

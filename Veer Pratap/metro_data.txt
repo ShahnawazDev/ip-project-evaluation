@@ -1,0 +1,84 @@
+blue1,dwarka sector - 21,dwarka sector - 8,3,no
+blue1,dwarka sector - 8,dwarka sector - 9,2,no
+blue1,dwarka sector - 9,dwarka sector - 10,2,no
+blue1,dwarka sector - 10,dwarka sector - 11,2,no
+blue1,dwarka sector - 11,dwarka sector - 12,2,no
+blue1,dwarka sector - 12,dwarka sector - 13,2,no
+blue1,dwarka sector - 13,dwarka sector - 14,2,no
+blue1,dwarka sector - 14,dwarka,2,no
+blue1,dwarka,dwarka mor,2,no
+blue1,dwarka mor,nawada,2,no
+blue1,nawada,uttam nagar west,2,no
+blue1,uttam nagar west,uttam nagar east,2,no
+blue1,uttam nagar east,janakpuri west,2,no
+blue1,janakpuri west,janakpuri east,2,no
+blue1,janakpuri east,tilak nagar,2,no
+blue1,tilak nagar,subhash nagar,2,no
+blue1,subhash nagar,tagore garden,2,no
+blue1,tagore garden,rajouri garden,2,no
+blue1,rajouri garden,ramesh nagar,2,no
+blue1,ramesh nagar,moti nagar,2,no
+blue1,moti nagar,kirti nagar,2,no
+blue1,kirti nagar,shadipur,2,no
+blue1,shadipur,patel nagar,2,no
+blue1,patel nagar,rajendra place,2,no
+blue1,rajendra place,karol bagh,2,no
+blue1,karol bagh,jhandewalan,2,no
+blue1,jhandewalan,ramakrishna ashram marg,2,no
+blue1,ramakrishna ashram marg,rajiv chowk,3,no
+blue1,rajiv chowk,barakhamba road,2,no
+blue1,barakhamba road,mandi house,2,no
+blue1,mandi house,supreme court,2,no
+blue1,supreme court,indraprastha,2,no
+blue1,indraprastha,yamuna bank,3,no
+blue1,yamuna bank,akshardham,3,yes
+blue1,akshardham,mayur vihar - i,3,no
+blue1,mayur vihar - i,mayur vihar extension,2,no
+blue1,mayur vihar extension,new ashok nagar,2,no
+blue1,new ashok nagar,noida sector - 15,2,no
+blue1,noida sector - 15,noida sector - 16,2,no
+blue1,noida sector - 16,noida sector - 18,2,no
+blue1,noida sector - 18,botanical garden,2,no
+blue1,botanical garden,golf course,3,no
+blue1,golf course,noida city centre,2,no
+blue1,noida city centre,sector - 34 noida,2,no
+blue1,sector - 34 noida,sector - 52 noida,2,no
+blue1,sector - 52 noida,sector - 61 noida,2,no
+blue1,sector - 61 noida,sector - 59 noida,2,no
+blue1,sector - 59 noida,sector - 62 noida,2,no
+blue1,sector - 62 noida,noida electronic city,2,no
+blue1,noida electronic city,0,0,no
+blue2,yamuna bank,laxmi nagar,3,yes
+blue2,laxmi nagar,nirman vihar,3,no
+blue2,nirman vihar,preet vihar,2,no
+blue2,preet vihar,karkarduma,2,no
+blue2,karkarduma,anand vihar isbt,2,no
+blue2,anand vihar isbt,kaushambi,2,no
+blue2,kaushambi,vaishali,2,no
+blue2,vaishali,0,0,no
+magenta,janakpuri west,dabri mor - janakpuri south,5,yes
+magenta,dabri mor - janakpuri south,dashrathpuri,5,no
+magenta,dashrathpuri,palam,2,no
+magenta,palam,sadar bazar cantonment,4,no
+magenta,sadar bazar cantonment,terminal 1-igi airport,3,no
+magenta,terminal 1-igi airport,shankar vihar,3,no
+magenta,shankar vihar,vasant vihar,3,no
+magenta,vasant vihar,munirka,3,no
+magenta,munirka,r.k.puram,2,no
+magenta,r.k.puram,iit,2,no
+magenta,iit,hauz khas,2,no
+magenta,hauz khas,panchsheel park,3,no
+magenta,panchsheel park,chirag delhi,2,no
+magenta,chirag delhi,greater kailash,2,no
+magenta,greater kailash,nehru enclave,2,no
+magenta,nehru enclave,kalkaji mandir,2,no
+magenta,kalkaji mandir,okhla nsic,2,no
+magenta,okhla nsic,sukhdev vihar,2,no
+magenta,sukhdev vihar,jamia millia islamia,2,no
+magenta,jamia millia islamia,okhla vihar,2,no
+magenta,okhla vihar,jasola vihar shaheen bagh,5,no
+magenta,jasola vihar shaheen bagh,kalindi kunj,5,no
+magenta,kalindi kunj,okhla bird sanctuary,2,no
+magenta,okhla bird sanctuary,botanical garden,3,no
+magenta,botanical garden,0,0,no
+

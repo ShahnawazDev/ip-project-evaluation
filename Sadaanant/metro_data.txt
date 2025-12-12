@@ -1,0 +1,81 @@
+Blue, Dwarka Sector 21, Dwarka Sector 8, 3, No, 11
+Blue, Dwarka Sector 8, Dwarka Sector 9, 2, No, 11
+Blue, Dwarka Sector 9, Dwarka Sector 10, 2, No, 11
+Blue, Dwarka Sector 10, Dwarka Sector 11, 2, No, 11
+Blue, Dwarka Sector 11, Dwarka Sector 12, 2, No, 11
+Blue, Dwarka Sector 12, Dwarka Sector 13, 2, No, 11
+Blue, Dwarka Sector 13, Dwarka Sector 14, 2, No, 11
+Blue, Dwarka Sector 14, Dwarka, 2, No, 11
+Blue, Dwarka, Dwarka Mor, 2, No, 11
+Blue, Dwarka Mor, Nawada, 2, No, 11
+Blue, Nawada, Uttam Nagar West, 2, No, 11
+Blue, Uttam Nagar West, Uttam Nagar East, 2, No, 11
+Blue, Uttam Nagar East, Janakpuri West, 2, No, 11
+Blue, Janakpuri West, Janakpuri East, 2, Yes, 11
+Blue, Janakpuri East, Tilak Nagar, 2, No, 11
+Blue, Tilak Nagar, Subhash Nagar, 2, No, 11
+Blue, Subhash Nagar, Tagore Garden, 2, No, 11
+Blue, Tagore Garden, Rajouri Garden, 2, No, 11
+Blue, Rajouri Garden, Ramesh Nagar, 2, No, 11
+Blue, Ramesh Nagar, Moti Nagar, 2, No, 11
+Blue, Moti Nagar, Kirti Nagar, 2, No, 11
+Blue, Kirti Nagar, Shadipur, 2, No, 11
+Blue, Shadipur, Patel Nagar, 2, No, 11
+Blue, Patel Nagar, Rajendra Place, 2, No, 11
+Blue, Rajendra Place, Karol Bagh, 2, No, 11
+Blue, Karol Bagh, Jhandewalan, 2, No, 11
+Blue, Jhandewalan, Ramakrishna Ashram Marg, 2, No, 11
+Blue, Ramakrishna Ashram Marg, Rajiv Chowk, 2, No, 11
+Blue, Rajiv Chowk, Barakhamba Road, 2, No, 11
+Blue, Barakhamba Road, Mandi House, 2, No, 11
+Blue, Mandi House, Supreme Court, 2, No, 11
+Blue, Supreme Court, Indraprastha, 2, No, 11
+Blue, Indraprastha, Yamuna Bank, 3, No, 11
+Blue, Yamuna Bank, Akshardham, 3, No, 11
+Blue, Akshardham, Mayur Vihar - I, 3, No, 11
+Blue, Mayur Vihar - I, Mayur Vihar Extension, 2, No, 11
+Blue, Mayur Vihar Extension, New Ashok Nagar, 2, No, 11
+Blue, New Ashok Nagar, Noida Sector-15, 2, No, 11
+Blue, Noida Sector-15, Noida Sector-16, 2, No, 11
+Blue, Noida Sector-16, Noida Sector-18, 2, No, 11
+Blue, Noida Sector-18, Botanical Garden, 2, No, 11
+Blue, Botanical Garden, Golf Course, 3, Yes, 11
+Blue, Golf Course, Noida City Centre, 2, No, 11
+Blue, Noida City Centre, Sector - 34 Noida, 2, No, 11
+Blue, Sector - 34 Noida, Sector - 52 Noida, 2, No, 11
+Blue, Sector - 52 Noida, Sector - 61 Noida, 2, No, 11
+Blue, Sector - 61 Noida, Sector - 59 Noida, 2, No, 11
+Blue, Sector - 59 Noida, Sector - 62 Noida, 2, No, 11
+Blue, Sector - 62 Noida, Noida Electronic City, 2, No, 11
+Blue, Yamuna Bank, Laxmi Nagar, 3, No, 11
+Blue, Laxmi Nagar, Nirman Vihar, 3, No, 11
+Blue, Nirman Vihar, Preet Vihar, 2, No, 11
+Blue, Preet Vihar, Karkarduma, 2, No, 11
+Blue, Karkarduma, Anand Vihar ISBT, 2, No, 11
+Blue, Anand Vihar ISBT, Kaushambi, 2, No, 11
+Blue, Kaushambi, Vaishali, 2, No, 11
+Magenta, Krishna Park Extension, Janakpuri West, 12, Yes, 21
+Magenta, Janakpuri West, Dabri Mor – Janakpuri South, 5, No, 11
+Magenta, Dabri Mor – Janakpuri South, Dashrathpuri, 5, No, 11
+Magenta, Dashrathpuri, Palam, 2, No, 11
+Magenta, Palam, Sadar Bazar Cantonment, 4, No, 11
+Magenta, Sadar Bazar Cantonment, Terminal 1-IGI Airport, 3, No, 11
+Magenta, Terminal 1-IGI Airport, Shankar Vihar, 3, No, 11
+Magenta, Shankar Vihar, Vasant Vihar, 3, No, 11
+Magenta, Vasant Vihar, Munirka, 3, No, 11
+Magenta, Munirka, R.K.Puram, 2, No, 11
+Magenta, R.K.Puram, IIT, 2, No, 11
+Magenta, IIT, Hauz Khas, 2, No, 11
+Magenta, Hauz Khas, Panchsheel Park, 3, No, 11
+Magenta, Panchsheel Park, Chirag Delhi, 2, No, 11
+Magenta, Chirag Delhi, Greater Kailash, 2, No, 11
+Magenta, Greater Kailash, Nehru Enclave, 2, No, 11
+Magenta, Nehru Enclave, Kalkaji Mandir, 2, No, 11
+Magenta, Kalkaji Mandir, Okhla NSIC, 2, No, 11
+Magenta, Okhla NSIC, Sukhdev Vihar, 2, No, 11
+Magenta, Sukhdev Vihar, Jamia Millia Islamia, 2, No, 11
+Magenta, Jamia Millia Islamia, Okhla Vihar, 2, No, 11
+Magenta, Okhla Vihar, Jasola Vihar Shaheen Bagh, 5, No, 11
+Magenta, Jasola Vihar Shaheen Bagh, Kalindi Kunj, 5, No, 11
+Magenta, Kalindi Kunj, Okhla Bird Sanctuary, 2, No, 11
+Magenta, Okhla Bird Sanctuary, Botanical Garden, 3, No, 11

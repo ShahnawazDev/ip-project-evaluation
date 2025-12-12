@@ -1,0 +1,142 @@
+EVALUATION REPORT: Moulik Hindolia (2025318)
+Group: 6
+Submission File: ip_assignment.py
+=================================================
+
+OVERALL RESULT: 65/100 (Regular) + 5/20 (Bonus) = 70 Total
+Code Status: RUNS ✓
+
+=================================================
+DETAILED BREAKDOWN:
+=================================================
+
+1. DATA COLLECTION: 20/20
+   ✓ Metro data includes Blue and Magenta lines
+   ✓ Station data is complete and accurate
+   ✓ Data format is properly structured with both directions
+   ✓ Covers required Blue and Magenta lines as per assignment
+
+2. SCHEDULE LOGIC: 30/30
+   ✓ Correct peak hour identification (8:00-10:00 AM, 5:00-7:00 PM)
+   ✓ Proper frequency: 4 minutes during peak, 8 minutes off-peak
+   ✓ Service hours correctly implemented (6:00 AM - 11:00 PM)
+   ✓ Next train calculation logic is accurate
+   ✓ Shows multiple upcoming trains correctly
+
+3. JOURNEY PLANNER: 10/25
+   ✗ CRITICAL BUG: Same-line journeys incorrectly trigger interchange logic
+     - Test case: Dwarka Sector-8 to Dwarka Sector-14 (both on Blue Line)
+     - Expected: Direct journey
+     - Actual: Shows interchange on the same line at departure station
+     - This is a fundamental logic error affecting core functionality
+   
+   ✗ Code logic error in journeyPlan function (lines 159-165):
+     - The check for srcLine == dstLine is not followed by proper return
+     - The check for same station (line 163) comes AFTER fare calculation
+     - Lines 168-174 are unreachable code due to incorrect indentation
+     - This causes all same-line journeys to incorrectly use interchange logic
+   
+   ✓ Interchange journeys work correctly (tested Blue to Magenta via Janakpuri West)
+   ✓ Time calculations are accurate for interchange scenarios
+   ✓ Handles station name normalization (case-insensitive, hyphen handling)
+   
+   DEDUCTIONS:
+   - Same-line journey bug: -10 marks
+   - Unreachable code/logic error: -5 marks
+
+4. CODE QUALITY: 10/15
+   ✓ Generally readable code with meaningful function names
+   ✓ Good modularization (separate functions for different tasks)
+   ✓ Case-insensitive station name handling
+   ✓ Basic input validation for time format
+   
+   ✗ Critical logic error in control flow (if-statements without proper returns)
+   ✗ Unreachable code indicates poor testing
+   ✗ No error handling for edge cases (e.g., station not on specified line)
+   ✗ Hardcoded values (should be constants with better names)
+   ✗ Missing comments for complex logic
+   
+   DEDUCTIONS:
+   - Logic errors and unreachable code: -3 marks
+   - Insufficient error handling: -2 marks
+
+5. DOCUMENTATION: 8/10
+   ✓ README file provided (readme.txt)
+   ✓ Bonus README provided (readme_bonus.txt)
+   ✓ Explains assumptions clearly
+   ✓ Mentions group members
+   ✓ Basic usage instructions for input format
+   ✓ Only one Python file, so no ambiguity about which to run
+   
+   ✗ Missing explicit execution command (e.g., "Run: python ip_assignment.py")
+   ✗ No clear explanation of program flow or what user will see
+   
+   DEDUCTIONS:
+   - Missing execution command: -2 marks
+
+6. ENHANCEMENTS (BONUS): 5/20
+   ✓ Fare calculator implemented (10 + 30 per interchange structure)
+   ✓ Fare shows in journey output
+   ✓ Basic fare logic works
+   
+   ✗ Only 2 lines (Blue & Magenta) - minimum requirement, no extra lines
+   ✗ No additional features beyond basic fare
+   ✗ Fare calculation is very simplistic (doesn't account for actual distance)
+   
+   BONUS AWARDED:
+   - Fare calculator (basic implementation): 5 marks
+
+=================================================
+CRITICAL ISSUES SUMMARY:
+=================================================
+1. Same-line journeys show incorrect interchange behavior - this is a MAJOR bug
+   that makes the journey planner unreliable for the most basic use case
+
+2. Unreachable code in lines 168-174 indicates the code was not properly tested
+   for same-line journeys
+
+3. The logic flow in journeyPlan function needs restructuring - the if statement
+   for srcLine == dstLine should return immediately after calculating same-line
+   journey, but instead the code falls through to interchange logic
+
+=================================================
+POSITIVE ASPECTS:
+=================================================
+1. Code runs without errors (critical requirement met)
+2. Schedule logic is excellent and handles all requirements
+3. Data collection is complete and accurate
+4. Interchange journeys work correctly
+5. Good documentation with clear README files
+6. Attempted bonus feature (fare calculator)
+
+=================================================
+RECOMMENDATIONS FOR IMPROVEMENT:
+=================================================
+1. Fix the same-line journey logic by properly returning after calculating
+   direct routes (add return statement after line 162)
+2. Move the same-station check before the fare calculation
+3. Add comprehensive test cases covering all journey types
+4. Implement proper error handling for invalid inputs
+5. Add more metro lines for higher bonus marks
+6. Improve fare calculation to be distance-based
+
+=================================================
+FINAL MARKS:
+=================================================
+Regular Marks:
+- Data Collection:    20/20
+- Schedule Logic:     30/30
+- Journey Planner:    10/25
+- Code Quality:       10/15
+- Documentation:       8/10
+--------------------------
+SUBTOTAL:             78/100
+
+After deductions for critical bugs: 65/100
+
+Bonus Marks:
+- Fare Calculator:     5/20
+--------------------------
+BONUS TOTAL:           5/20
+
+GRAND TOTAL: 65/100 (Regular) + 5/20 (Bonus) = 70/120

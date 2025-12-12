@@ -1,0 +1,45 @@
+
+I am sharing the evaluation guidelines for the assignment with you all. Please go through the details carefully, as they outline the marking scheme, bonus criteria, deadline rules, and documentation requirements.
+you have to evaluate assignements and the marks to results_all.csv and also generate {name}_result.csv file with contains description why marks are deducted and where.
+Final Evaluation Criteria
+
+General Rules
+
+
+If the code runs: Full marks will be awarded as per the rubric.
+
+If there is any compilation error/code does not run: Zero marks for the entire assignment.
+
+Deadline Policy:
+
+Deadline: 25 November, 5:00 PM
+
+Extension: Submissions received till 5:15 PM will receive bonus marks if applicable.
+
+After 5:15 PM on 25 Nov: Only regular evaluation, no bonus.
+
+After 25 Nov: No marks will be awarded.
+
+README Policy:
+
+If a README file is provided → Full 10 marks for documentation.
+
+Marks will be recorded in two separate columns:
+
+Regular Marks (Total marks: 100 marks)
+
+Bonus Marks (Total marks: 20 marks)
+
+If code running + Sample Test case pass (100 marks) 
+
+Data Collection 20  : Accuracy and completeness of Blue & Magenta line data  
+Schedule Logic  30  Correct computation of next train times  
+Journey Planner  25  Accurate routing, interchange handling, timing logic  
+Code Quality  15  Modularity, readability, error handling  (minimum 10 + 5 as per TAs' assessment)
+Documentation  10  Clear explanations and usage guide  (If readme, 10)
+Enhancements (Bonus)  More lines, fare calculations (20 marks)
+
+Full metro simulation with fare calculator, timing, etc: 20
+One additional line: 3 marks + 2 marks (If fare)
+If 50% line cover: 7 marks  + 3 marks (If fare)
+If 75% line cover: 11 marks  + 4 marks (If fare)

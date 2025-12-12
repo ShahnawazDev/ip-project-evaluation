@@ -1,0 +1,245 @@
+/blue
+Dwarka Sector-21,3,No
+Dwarka Sector-8,3,No
+Dwarka Sector-9,2,No
+Dwarka Sector-10,2,No
+Dwarka Sector-11,2,No
+Dwarka Sector-12,2,No
+Dwarka Sector-13,1,No
+Dwarka Sector-14,2,No
+Dwarka,3,No
+Dwarka Mor,2,No
+Nawada,2,No
+Uttam Nagar West,2,No
+Uttam Nagar East,2,No
+Janakpuri West,2,Yes
+Janakpuri East,2,No
+Tilak Nagar,2,No
+Subhash Nagar,2,No
+Tagore Garden,2,No
+Rajouri Garden,2,No
+Ramesh Nagar,2,No
+Moti Nagar,2,No
+Kirti Nagar,2,Yes
+Shadipur,2,No
+Patel Nagar,2,No
+Rajendra Place,2,No
+Karol Bagh,2,No
+Jhandewalan,2,No
+Ramakrishna Ashram Marg,2,No
+Rajiv Chowk,3,No
+Barakhamba Road,1,No
+Mandi House,3,No
+Supreme Court,1,No
+Indraprastha,2,No
+Yamuna Bank,3,Yes
+Akshardham,3,No
+Mayur Vihar-1,3,No
+Mayur Vihar Extension,2,No
+New Ashok Nagar,2,No
+Noida Sector-15,2,No
+Noida Sector-16,2,No
+Noida Sector-18,2,No
+Botanical Garden,2,Yes
+Golf Course,3,No
+Wave City Center Noida,2,No
+Sector 34 Noida,2,No
+Sector 52 Noida,2,No
+Sector 61 Noida,2,No
+Sector 59 Noida,2,No
+Sector 62 Noida,2,No
+Noida Electronic City,2,No
+/blue1
+Yamuna Bank,3,Yes
+Laxmi Nagar,3,No
+Nirman Vihar,2,No
+Preet Vihar,2,No
+Karkarduma,2,No
+Anand Vihar Metro Station,2,No
+Kaushambi,2,No
+Vaishali,0,No
+/magenta
+Janakpuri West,2,Yes
+Dabri Mor - Janakpuri South,2,No
+Dashrathpuri,3,No
+Palam,2,No
+Sadar Bazar Cantonment,4,No
+Terminal 1-IGI Airport,3,No
+Shankar Vihar,3,No
+Vasant Vihar,3,No
+Munirka,3,No
+R.K. Puram,2,No
+IIT,2,No
+Hauz Khas,2,No
+Panchsheel Park,3,No
+Chirag Delhi,2,No
+Greater Kailash,2,No
+Nehru Enclave,2,No
+Kalkaji Mandir,2,No
+Okhla NSIC,1,No
+Sukhdev Vihar,3,No
+Jamia Millia Islamia,2,No
+Okhla Vihar,2,No
+Jasola Vihar Shaheen Bagh,3,No
+Kalindi Kunj,4,No
+Okhla Bird Sanctuary,3,No
+Botanical Garden,3,No
+/yellow
+Samaypur Badli,0,No
+Rohini Sector 18-19,2,No
+Haiderpur Badli Mor,3,No
+Jahangirpuri,3,No
+Adarsh Nagar,3,No
+Azadpur,2,Yes
+Model Town,3,No
+GTB Nagar,2,No
+Vishwavidyalaya,3,No
+Vidhan Sabha,2,No
+Civil Lines,3,No
+Kashmere Gate,3,Yes
+Chandni Chowk,2,No
+Chawri Bazar,2,No
+New Delhi,2,Yes
+Rajiv Chowk,2,Yes
+Patel Chowk,2,No
+Central Secretariat,2,Yes
+Udyog Bhawan,2,No
+Lok Kalyan Marg,3,No
+Jor Bagh,2,No
+INA,2,Yes
+AIIMS,3,No
+Green Park,2,No
+Hauz Khas,2,Yes
+Malviya Nagar,3,No
+Saket,3,No
+Qutub Minar,3,No
+Chhatarpur,3,No
+Sultanpur,2,No
+Ghitorni,3,No
+Arjan Garh,3,No
+Guru Dronacharya,3,No
+Sikandarpur,2,Yes
+MG Road,2,No
+IFFCO Chowk,3,No
+Millennium City Centre Gurugram,2,No
+/Green
+Brigadier Hoshiar Singh,0,No
+Bahadurgarh City Park,3,No
+Pandit Shree Ram Sharma,3,No
+Tikri Border,3,No
+Tikri Kalan,3,No
+Ghevra Metro Station,3,No
+Mundka Industrial Area,3,No
+Mundka,3,No
+Rajdhani Park,2,No
+Nangloi Railway Station,2,No
+Nangloi,2,No
+Surajmal Stadium,2,No
+Udyog Nagar,3,No
+Peeragarhi,2,No
+Paschim Vihar West,2,No
+Paschim Vihar East,2,No
+Madipur,3,No
+Shivaji Park,2,No
+Punjabi Bagh,2,No
+Ashok Park Main,2,Yes
+Satguru Ram Singh Marg,2,No
+Inderlok,2,Yes
+/red
+Shaheed Sthal (New Bus Adda),0,No
+Hindon River,2,No
+Arthala,2,No
+Mohan Nagar,3,No
+Shyam Park,2,No
+Major Mohit Sharma Rajender Nagar,3,No
+Raj Bagh,2,No
+Shaheed Nagar,2,No
+Dilshad Garden,3,No
+Jhilmil,2,No
+Mansarovar Park,2,No
+Shahdara,3,No
+Welcome,2,Yes
+Seelampur,2,No
+Shastri Park,2,No
+Kashmere Gate,3,Yes
+Tis Hazari,2,No
+Pul Bangash,2,No
+Pratap Nagar,2,No
+Shastri Nagar,2,No
+Inderlok,3,Yes
+Kanhaiya Nagar,2,No
+Keshav Puram,2,No
+Netaji Subhash Place,3,Yes
+Kohat Enclave,2,No
+Pitampura,2,No
+Rohini East,3,No
+Rohini West,2,No
+Rithala,2,No
+/grey
+Dwarka,3,Yes
+Nangli,2,No
+Najafgarh,2,No
+Dhansa Bus Stand,2,No
+/purple
+Kashmere Gate,3,Yes
+Lal Qila,2,No
+Jama Masjid,2,No
+Delhi Gate,2,No
+ITO,3,No
+Mandi House,3,Yes
+Janpath,2,No
+Central Secretariat,3,Yes
+Khan Market,2,No
+Jawaharlal Nehru Stadium,2,No
+Jangpura,2,No
+Lajpat Nagar,3,Yes
+Moolchand,2,No
+Kailash Colony,2,No
+Nehru Place,2,No
+Kalkaji Mandir,3,Yes
+Govind Puri,2,No
+Okhla,2,No
+Jasola – Apollo,2,No
+Sarita Vihar,2,No
+Mohan Estate,2,No
+Tughlakabad,3,No
+Badarpur Border,2,No
+Sarai,2,No
+Nangli,2,No
+Faridabad Old,2,No
+Neelam Chowk Ajronda,2,No
+Bata Chowk,2,No
+Escorts Mujesar,2,No
+Sant Surdas Sihi,2,No
+Raja Nahar Singh,2,No
+/pink
+Majlis Park,3,No
+Azadpur,2,Yes
+Shalimar Bagh,2,No
+Netaji Subhash Place,3,Yes
+Shakurpur,2,No
+Punjabi Bagh West,2,Yes
+ESI Hospital,2,No
+Rajouri Garden,3,Yes
+Mayapuri,2,No
+Naraina Vihar,2,No
+Delhi Cantt,3,No
+Durgabai Deshmukh South Campus,2,Yes
+Sir Vishweshwaraiah Moti Bagh,2,No
+Bhikaji Cama Place,2,No
+Sarojini Nagar,2,No
+INA,3,Yes
+South Extension,2,No
+Lajpat Nagar,3,Yes
+Vinobapuri,2,No
+Ashram,2,No
+Sarai Kale Khan - Nizamuddin,3,No
+IP Extension,2,No
+Mandawali - West Vinod Nagar,2,No
+East Vinod Nagar – Mayur Vihar-II,2,No
+Trilokpuri Sanjay Lake,2,No
+Vinod Nagar East,2,No
+Mayur Vihar Pocket 1,2,No
+Mayur Vihar Phase-I,2,No
+Punjabi Bagh East,2,No
+Shiv Vihar,2,No

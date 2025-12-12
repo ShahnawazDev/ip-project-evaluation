@@ -1,0 +1,115 @@
+Line, Current station, Time for next station 
+Blue_common, Dwarka Sector 21, 3
+Blue_common, Dwarka Sector 8, 2
+Blue_common, Dwarka Sector 9, 2
+Blue_common, Dwarka Sector 10, 2
+Blue_common, Dwarka Sector 11, 2
+Blue_common, Dwarka Sector 12, 2
+Blue_common, Dwarka Sector 13, 2
+Blue_common, Dwarka Sector 14, 2
+Blue_common, Dwarka, 2
+Blue_common, Dwarka Mor, 2
+Blue_common, Nawada, 2
+Blue_common, Uttam Nagar West, 2
+Blue_common, Uttam Nagar East, 2
+Blue_common, Janakpuri West, 2
+Blue_common, Janakpuri East, 2
+Blue_common, Tilak Nagar, 2
+Blue_common, Subhash Nagar, 2
+Blue_common, Tagore Garden, 2
+Blue_common, Rajouri Garden, 2
+Blue_common, Ramesh Nagar, 2
+Blue_common, Moti Nagar, 2
+Blue_common, Kirti Nagar, 2
+Blue_common, Shadipur, 2
+Blue_common, Patel Nagar, 2
+Blue_common, Rajendra Place, 2
+Blue_common, Karol Bagh, 2
+Blue_common, Jhandewalan, 2
+Blue_common, Ramakrishna Ashram Marg, 2
+Blue_common, Rajiv Chowk, 2
+Blue_common, Barakhamba Road, 2
+Blue_common, Mandi House, 2
+Blue_common, Supreme Court, 2
+Blue_common, Indraprastha, 3
+Blue_common, Yamuna Bank, 3
+Blue_common, Akshardham, 3
+Blue_common, Mayur Vihar Phase-I, 2
+Blue_common, Mayur Vihar Extension, 2
+Blue_common, New Ashok Nagar, 2
+Blue_common, Noida Sector 15, 2
+Blue_common, Noida Sector 16, 2
+Blue_common, Noida Sector 18, 2
+Blue_common, Botanical Garden, 3
+Blue_common, Golf Course, 2
+Blue_common, Noida City Centre, 2
+Blue_common, Sector - 34 Noida, 2
+Blue_common, Sector - 52 Noida, 2
+Blue_common, Sector - 61 Noida, 2
+Blue_common, Sector - 59 Noida, 2
+Blue_common, Sector - 62 Noida, 2
+Blue_common, Noida Electronic City, 0
+Blue_Vaishali, Yamuna Bank, 3
+Blue_Vaishali, Laxmi Nagar, 3
+Blue_Vaishali, Nirman Vihar, 2
+Blue_Vaishali, Preet Vihar, 2
+Blue_Vaishali, Karkar Duma, 2
+Blue_Vaishali, Anand Vihar, 2
+Blue_Vaishali, Kaushambi, 2
+Blue_Vaishali, Vaishali, 0
+Magenta, Janakpuri West, 5
+Magenta, Dabri Mor - Janakpuri South, 5
+Magenta, Dashrathpuri, 2
+Magenta, Palam, 4
+Magenta, Sadar Bazaar Cantonment, 3 
+Magenta, Terminal 1 - IGI Airport, 3
+Magenta, Shankar Vihar, 3
+Magenta, Vasant Vihar, 3
+Magenta, Munirka, 2
+Magenta, R.K. Puram, 2
+Magenta, IIT, 2
+Magenta, Hauz Khas, 3
+Magenta, Panchsheel Park, 2
+Magenta, Chirag Delhi, 2
+Magenta, Greater Kailash, 2
+Magenta, Nehru Enclave, 2 
+Magenta, Kalkaji Mandir, 2 
+Magenta, Okhla NSIC, 2
+Magenta, Sukhdev Vihar, 2
+Magenta, Jamia Millia Islamia, 2
+Magenta, Okhla Vihar, 5
+Magenta, Jasola Vihar Shaheen Bagh, 5
+Magenta, Kalindi Kunj, 2
+Magenta, Okhla Bird Sanctuary, 3
+Magenta, Botanical Garden, 0 
+Airport_express, New Delhi-Airport Express, 3
+Airport_express, Shivaji Stadium, 5
+Airport_express, Dhaula Kuan, 5
+Airport_express, Delhi Aerocity, 4
+Airport_express, Airport (T-3), 3
+Airport_express, Dwarka Sector 21, 0
+Gray, Dwarka, 2
+Gray, Nangli, 4
+Gray, Najafgarh, 0
+Green_main, Kirti Nagar, 2
+Green_main, Satguru Ram Singh Marg, 3
+Green_main, Ashok Park Main, 2
+Green_main, Punjabi Bagh, 5 
+Green_main, Shivaji Park, 2
+Green_main, Madipur, 2 
+Green_main, Paschim Vihar East, 2 
+Green_main, Paschim Vihar West, 2
+Green_main, Peeragarhi, 2
+Green_main, Udyog Nagar, 2 
+Green_main, Maharaja Surajmal Stadium, 2
+Green_main, Nangloi, 2
+Green_main, Nangloi Railway Station, 2
+Green_main, Rajdhani Park, 2
+Green_main, Mundka, 2 
+Green_main, Mundka Industrial Area, 3
+Green_main, Ghevra Metro start, 3
+Green_main, Tikri Kalan, 2
+Green_main, Tikri Border, 2
+Green_main, Pandit Shree Ram Sharma, 2
+Green_main, Bahadurgarh City, 3
+Green_main, Brig. Hoshiar Singh, 0

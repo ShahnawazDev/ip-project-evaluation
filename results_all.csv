@@ -1,0 +1,20 @@
+,,,,,,,,,,,,,
+p,Roll No,Name,Email ID,Group,Data Collection,Schedule Logic,Journey Planner,Code quality,Documentation,Bonus(Extensions),Total,Comments,Bonus Comments
+269,2025590,Ananya Sen Authi,ananya25590@iiitd.ac.in,6,20,28,0,10,9,0,67,Critical bug in journey planner (line 120 logic error). Good data collection and schedule logic. README provided.,No bonus features
+286,2025607,Manan Dharmendrakumar Patel,manan25607@iiitd.ac.in,6,20,30,25,14,10,15,99,Exceptional submission. Flawless execution. Professional code with BFS routing algorithm. Two READMEs provided.,Two additional complete lines (Airport Express + Green)
+15,2025318,Moulik Hindolia,moulik25318@iiitd.ac.in,6,20,30,10,10,8,5,78,"Code runs. Critical bug: same-line journeys incorrectly show interchange (lines 159-174 logic error). README lacks explicit execution command. Schedule logic perfect, data complete.",Basic fare calculator (5 marks)
+32,2025337,Nikhil Khowal,nikhil25337@iiitd.ac.in,6,,,,,,,0,,
+49,2025354,Parag Prasun,parag25354@iiitd.ac.in,6,,,,,,,0,,
+66,2025372,Piyush Saini,piyush25372@iiitd.ac.in,6,,,,,,,0,,
+83,2025390,Prashun Jha,prashun25390@iiitd.ac.in,6,,,,,,,0,,
+100,2025408,Rahul Saini,rahul25408@iiitd.ac.in,6,,,,,,,0,,
+117,2025425,Rishav,rishav25425@iiitd.ac.in,6,,,,,,,0,,
+134,2025444,Sadaanant,sadaanant25444@iiitd.ac.in,6,,,,,,,0,,
+151,2025461,Satwik Singh,satwik25461@iiitd.ac.in,6,,,,,,,0,,
+303,2025624,Shiven Thareja,shiven25624@iiitd.ac.in,6,,,,,,,0,,
+168,2025480,Shlok,shlok25480@iiitd.ac.in,6,,,,,,,0,,
+184,2025499,Sonakshi Rohliyan,sonakshi25499@iiitd.ac.in,6,,,,,,,0,,
+201,2025519,Uday Singh Tonk,uday25519@iiitd.ac.in,6,,,,,,,0,,
+218,2025539,Veer Pratap,veer25539@iiitd.ac.in,6,,,,,,,0,,
+235,2025556,Vivaswat Kumar,vivaswat25556@iiitd.ac.in,6,,,,,,,0,,
+252,2025573,Yash Yadav,yash25573@iiitd.ac.in,6,,,,,,,0,,

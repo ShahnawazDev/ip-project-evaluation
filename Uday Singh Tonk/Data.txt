@@ -1,0 +1,83 @@
+Noida Electronic City
+Sector - 62 Noida,3
+Sector - 59 Noida,3
+Sector - 61 Noida,2
+Sector - 52 Noida,3
+Sector - 34 Noida,3
+Noida City Centre,2
+Golf Course,3
+Botanical Garden,3
+Noida Sect - 18,2
+Noida Sect - 16,3
+Noida Sect - 15,2
+New Ashok Nagar,3
+Mayur Vihar Extn,2
+Mayur Vihar - I,3
+Akshardham,4
+Yamuna bank,3
+Inderprastha,4
+Supreme Court,2
+Mandi House,2
+Barakhambha,2
+R.K.Ashram Marg,4
+Jhandewalan,2
+Karol Bagh,3
+Rajendra Place,2
+Patel Nagar,2
+Shadipur,3
+Kirti Nagar,2
+Moti Nagar,2
+Ramesh Nagar,3
+Rajouri Garden,2
+Tagore Garden,3
+Subhash Nagar,2
+Tilak Nagar,2
+Janak Puri East,2
+Janak Puri West,2
+Uttam Nagar East,3
+Uttam Nagar West,2
+Nawada,2
+Dwarka Mor,3
+Dwarka,3
+Dwarka Sect - 14,3
+Dwarka Sec - 13,2
+Dwarka Sec - 12,2
+Dwarka Sec - 11,2
+Dwarka Sec - 10,2
+Dwarka Sec - 9,2
+Dwarka Sector - 8,2
+Dwarka Sector - 21,4
+
+Laxmi Nagar,3
+Nirman Vihar,3
+Preet Vihar,2
+Karkardooma,3
+Anand Vihar ISBT,2
+Kaushambi,2
+Vaishali,2
+
+Botanical Garden
+Okhla Bird Sanctuary,4
+Kalindi Kunj,3
+Jasola Vihar Shaheen Bagh,4
+Okhla Vihar,4
+Jamia Millia Islamia,2
+Sukhdev Vihar,3
+Okhla NSIC,3
+Kalkaji Mandir,2
+Nehru Enclave,2
+Greater Kailash,3
+Chirag Delhi,2
+Panchsheel Park,2
+Hauz Khas,4
+IIT,2
+R.K.Puram,2
+Munirka,3
+Vasant Vihar,3
+Shankar Vihar,4
+Terminal 1 IGI Airport,5
+Sadar Bazar Cantonment,4
+Palam,6
+Dashrath Puri,3
+Dabri Mor-Janakpuri South,3
+Janak Puri West,3

@@ -1,0 +1,87 @@
+Blue line1
+Dwarka Sector-21  No  3
+Dwarka Sector-8  No  2
+Dwarka Sector-9  No  2
+Dwarka Sector-10  No  2
+Dwarka Sector-11  No  2
+Dwarka Sector-12  No  2
+Dwarka Sector-13  No  2
+Dwarka Sector-14  No  2
+Dwarka  No  2
+Dwarka Mor  No  2
+Nawada  No  2
+Uttam Nagar West  No  2
+Uttam Nagar East  No  2
+Janakpuri West  Yes  2
+Janakpuri East  No  2
+Tilak Nagar  No  2
+Subhash Nagar  No  2
+Tagore Garden  No  2
+Rajouri Garden  No  2
+Ramesh Nagar  No  2
+Moti Nagar  No  2
+Kirti Nagar  No  2
+Shadipur  No  2
+Patel Nagar  No  2
+Rajendra Place  No  2 
+Karol Bagh  No  2
+Jhandewalan  No  2
+Ramakrishna Ashram Marg  No  2
+Rajiv Chowk  No  2
+Barakhamba Road  No  2
+Mandi House  No  2
+Supreme Court  No  2
+Indraprastha  No  3
+Yamuna Bank  No  3
+Akshardham  No  3
+Mayur Vihar-I  No  2
+Mayur Vihar Extension  No  2
+New Ashok Nagar  No  2
+Noida Sector 15  No  2
+Noida Sector 16  No  2
+Noida Sector 18  No  2
+Botanical Garden  Yes  3
+Golf Course  No  2
+Noida City Centre  No  2
+Noida Sector 34  No  2
+Noida Sector 52  No  2
+Noida Sector 61  No  2
+Noida Sector 59  No  2
+Noida Sector 62  No  2  
+Noida Electronic City  No  2
+Blue line2
+Yamuna Bank  yes  3
+Laxmi Nagar  No  3
+Nirman Vihar  No  2
+Preet Vihar  No  2
+Karkardooma  No  2
+Anand Vihar  No  2
+Kaushambi  No  2
+Vaishali  No  2
+Magenta line
+Krishna Park Extension  No  12
+Janakpuri West  Yes  5
+Dabri Mor - Janakpuri South  No  5 
+Dashrathpuri  No  2
+Palam  No  4
+Sadar Bazar Cantonment  No  3
+Terminal 1–IGI Airport  No  3
+Shankar Vihar  No  3
+Vasant Vihar  No  3
+Munirka  No  2
+R. K. Puram  No  2
+IIT Delhi  No  2
+Hauz Khas  No  3
+Panchsheel Park  No  2
+Chirag Delhi  No  2
+Greater Kailash  No  2
+Nehru Enclave  No  2
+Kalkaji Mandir  No  2
+Okhla NSIC  No  2
+Sukhdev Vihar  No  2
+Jamia Millia Islamia  No  2
+Okhla Vihar  No  5
+Jasola Vihar Shaheen Bagh  No  5
+Kalindi Kunj  No  2
+Okhla Bird Sanctuary  No  3
+Botanical Garden  No  3
