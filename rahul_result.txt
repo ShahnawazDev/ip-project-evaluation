@@ -6,12 +6,12 @@ Date: December 13, 2025
 
 FINAL SCORES:
 - Data Collection: 20/20
-- Schedule Logic: 0/30
+- Schedule Logic: 20/30
 - Journey Planner: 24/25
 - Code Quality: 10/15
 - Documentation: 9/10
 - Bonus: 12/15
-TOTAL: 75/115
+TOTAL: 95/115
 
 ========================================
 
@@ -28,17 +28,32 @@ TOTAL: 75/115
 ✓ Interchange points properly marked
 PERFECT SCORE
 
-2. SCHEDULE LOGIC (0/30)
-✗ NOT IMPLEMENTED AS SEPARATE MODULE
-The program calculates metro arrival times but only within journey planning context.
-There's no standalone "check next metro at station X" feature.
+2. SCHEDULE LOGIC (20/30)
+⚠ IMPLEMENTED BUT NOT AS STANDALONE MODULE
 
-The code does show metro arrival times:
-- "METRO ARRIVING AT BLUE LINE=8:25"
-- Uses predictor() function internally
+POSITIVE ASPECTS:
+✓ predictor() function EXISTS and calculates metro arrival times correctly
+✓ Handles peak/off-peak hour frequency (4 min vs 8 min)
+✓ Calculates first train arrival time based on travel time from terminal
+✓ Shows metro arrival at source station: "METRO ARRIVING AT BLUE LINE=8:25"
+✓ Accounts for waiting time at interchange stations
+✓ Works for all 4 lines (Blue, Magenta, Red, Yellow)
 
-But this is embedded in journey planner, not a separate user-accessible feature.
-Required standalone schedule timing query is MISSING.
+CRITICAL LIMITATION:
+✗ NOT ACCESSIBLE AS STANDALONE FEATURE
+- User cannot independently query "next metro at Station X"
+- Must plan full journey to see schedule information
+- No separate menu option for schedule checking
+- Assignment requires TWO separate functionalities (Phase 2)
+
+SCORING JUSTIFICATION:
+The schedule calculation logic is comprehensive and correct (worth 30/30).
+The program DISPLAYS schedule output: "METRO ARRIVING AT BLUE LINE=8:25".
+However, it fails the requirement of being a separate "Metro Timings Module".
+Awarding 20/30 (67%) for:
+  - Having correct and complete logic (10 marks)
+  - Displaying schedule information to user (10 marks)
+  - Deduction (-10 marks) for not implementing as standalone accessible feature
 
 3. JOURNEY PLANNER (24/25)
 ✓ WORKS EXCELLENTLY!
@@ -122,10 +137,11 @@ STRENGTHS:
 5. Shows dedication with 1214 lines of code
 
 CRITICAL ISSUES:
-1. No separate schedule timing module (missing Phase 2 Part A)
+1. Schedule timing not accessible as standalone module (Phase 2 requires separate features)
 2. No menu interface - expects all inputs upfront
-3. Code is very long with much repetition
+3. Code is very long with much repetition (1214 lines)
 4. Could use more elegant algorithm instead of case-by-case handling
+5. Station validation has bugs (shows "station not found" incorrectly)
 
 CODE REVIEW:
 The jrny_pred() function is massive with special case handling for every possible route combination. While thorough, this approach:
@@ -135,5 +151,8 @@ The jrny_pred() function is massive with special case handling for every possibl
 
 However, it shows the student understands the problem thoroughly and handles edge cases.
 
-RECOMMENDATION:
+RECOMMENDATION:1214-line implementation. Journey planner works excellently for multiple lines and complex interchanges. Schedule calculation logic is correct but not properly exposed as separate feature. Good bonus features with Red and Yellow lines implemented. Needs to: (1) provide standalone schedule query feature, (2) implement menu system, (3) refactor repetitive code using more elegant algorithms.
+
+REEVALUATION SUMMARY:
+Original score of 0/30 for Schedule Logic was too harsh. The predictor() function demonstrates complete understanding of schedule timing with correct peak/off-peak handling, first train calculations, and multi-line support. The program DISPLAYS this information to users. Awarding 20/30 (67%) - 10 marks for correct logic implementation, 10 marks for displaying schedule output, with 10 mark deduction for not implementing as standalone menu-accessible feature per Phase 2 requirements.
 Student shows strong commitment and thoroughness with extensive implementation. Journey planner works well for multiple lines and complex interchanges. However, needs to implement separate schedule timing module and use more efficient algorithms. Good bonus features implementation.
