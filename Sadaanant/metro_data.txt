@@ -55,8 +55,8 @@ Blue, Karkarduma, Anand Vihar ISBT, 2, No, 11
 Blue, Anand Vihar ISBT, Kaushambi, 2, No, 11
 Blue, Kaushambi, Vaishali, 2, No, 11
 Magenta, Krishna Park Extension, Janakpuri West, 12, Yes, 21
-Magenta, Janakpuri West, Dabri Mor – Janakpuri South, 5, No, 11
-Magenta, Dabri Mor – Janakpuri South, Dashrathpuri, 5, No, 11
+Magenta, Janakpuri West, Dabri Mor â€“ Janakpuri South, 5, No, 11
+Magenta, Dabri Mor â€“ Janakpuri South, Dashrathpuri, 5, No, 11
 Magenta, Dashrathpuri, Palam, 2, No, 11
 Magenta, Palam, Sadar Bazar Cantonment, 4, No, 11
 Magenta, Sadar Bazar Cantonment, Terminal 1-IGI Airport, 3, No, 11

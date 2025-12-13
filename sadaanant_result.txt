@@ -1,17 +1,19 @@
 ========================================
-DELHI METRO SIMULATOR - EVALUATION REPORT
+DELHI METRO SIMULATOR - EVALUATION REPORT (REEVALUATED)
 Student: Sadaanant (sadaanant25444@iiitd.ac.in)
 Date: December 13, 2025
+Reevaluation Date: December 13, 2025
 ========================================
 
 FINAL SCORES:
 - Data Collection: 17/20
-- Schedule Logic: 0/30
+- Schedule Logic: 20/30
 - Journey Planner: 23/25
-- Code Quality: 11/15
-- Documentation: 7/10
-- Bonus: 5/15
-TOTAL: 63/105
+- Code Quality: 12/15
+- Documentation: 10/10
+- Bonus: 5/20
+TOTAL (Regular): 82/100
+TOTAL (With Bonus): 87/120
 
 ========================================
 
@@ -30,14 +32,26 @@ ISSUES:
 - Creates/overwrites file each run
 Deduction: -3 marks
 
-2. SCHEDULE LOGIC (0/30)
-✗ NOT IMPLEMENTED AS SEPARATE MODULE
-No standalone schedule timing feature.
-Program only does journey planning, not individual station timing queries.
+2. SCHEDULE LOGIC (20/30)
+✓ SCHEDULE LOGIC EXISTS AND WORKS!
 
-User cannot check "when is next metro at station X" without specifying a destination.
+REEVALUATION FINDINGS:
+- metro_timing() function exists at lines 155-169
+- Correctly calculates next metro time with peak/off-peak handling
+- Peak hours (8-10 AM, 5-7 PM): 4 min frequency
+- Off-peak: 8 min frequency
+- Prints "Next metro at X:Y" (line 168)
+- TESTED: Shows correct times (e.g., 9:18 → 9:20, 8:22 → 8:24, 7:15 → 7:20)
 
-Required functionality completely missing.
+ISSUE:
+✗ NOT A STANDALONE MODULE
+- No menu system to just check metro timings
+- Always runs embedded with journey planner (line 169)
+- User cannot check "next metro at station X" without specifying destination
+- Assignment requires TWO SEPARATE functionalities, got one combined
+
+VERDICT: Has logic + displays output, but not separate module
+Award: 20/30 (previous 0/30 was too harsh)
 
 3. JOURNEY PLANNER (23/25)
 ✓ WORKS WELL!
@@ -69,54 +83,63 @@ Minor issue:
 
 Deduction: -2 marks (would be more but fare is bonus)
 
-4. CODE QUALITY (11/15)
+4. CODE QUALITY (12/15)
 Positives:
 + Uses datetime module properly
 + Imports and time handling are correct
-+ Creates reverse_data for bidirectional travel (smart approach)
-+ Function modularization (fare_calculator defined)
-+ Good variable names
++ Creates reverse_data for bidirectional travel (SMART approach - lines 132-135)
++ Function modularization (metro_timing, metro_timing_interchange, fare_calculator, time_calculator1)
++ Good variable names and logical structure
++ Handles both directions for pathfinding
++ Proper assert for time validation (lines 117-121)
 
 Negatives:
-- Writing data to file at runtime is poor practice
+- Writing data to file at runtime is poor practice (lines 1-89)
 - No menu system (expects source, dest, time upfront)
-- Fare calculation logic is fundamentally broken
-- Limited error handling
-Deduction: -4 marks
+- Fare calculation logic is fundamentally broken (adds all fares)
+- Limited error handling beyond time validation
+Deduction: -3 mark10/10)
+✓ Has READMEFILE.pdf (112KB, dated 12-12-2025)
 
-5. DOCUMENTATION (7/10)
-✓ Has READMEFILE.pdf
+REEVALUATION:
+Per checking instructions: "If a README file is provided → Full 10 marks for documentation"
+- README file exists ✓
+- Proper file size indicates substantive content ✓
+- Following evaluation guidelines strictly ✓
 
-ISSUES:
-- PDF format not ideal (text preferred)
-- Couldn't fully review PDF content
-- Doesn't explain unusual data file creation approach
+FULL MARKS: 10/10 (no deduction)nusual data file creation approach
 - Lacks clear execution instructions
 Deduction: -3 marks
-
-6. BONUS FEATURES (5/15)
+20)
 ✓ FARE CALCULATION ATTEMPTED (5 marks)
   BUT COMPLETELY WRONG IMPLEMENTATION
-  - fare_calculator() function exists
+  - fare_calculator() function exists (lines 140-150)
   - Shows fare in output
-  - But calculation is incorrect (990 instead of ~40)
-  - Appears to sum all fare values in path, not calculate properly
+  - But calculation is incorrect:
+    * Dwarka → Botanical Garden: Shows 990 (should be ~40-50)
+    * Dwarka → Rajouri Garden: Shows 110 (should be ~30-40)
+    * Dwarka Sector 21 → Noida Electronic City: Shows 539 (should be ~50-60)
+  - Root cause: Sums all fare column values (11) for every station
+  - Should use distance-based or station-count-based calculation
 
 ✗ No additional metro lines
 ✗ No other bonus features
 
+Partial credit: 5/20 for attempt (total bonus marks is 20, not 15)
 Partial credit: 5/15 for attempt
+Schedule logic EXISTS and works correctly with peak/off-peak timing
+2. Journey planner works excellently for both same-line and interchange
+3. Creates bidirectional data (reverse_data) cleverly for pathfinding
+4. Handles line changes correctly with proper interchange logic
+5. Shows transfer stations and timing accurately
+6. Uses datetime module appropriately
+7. Good function modularization
 
-========================================
-DETAILED ANALYSIS:
-
-STRENGTHS:
-1. Journey planner works for routing
-2. Handles line changes correctly
-3. Creates bidirectional data (reverse_data) cleverly
-4. Shows transfer stations and timing
-5. Uses datetime module appropriately
-
+CRITICAL ISSUES:
+1. No menu interface - schedule logic not separate module (embedded only)
+2. Fare calculation is completely wrong (990 rupees for normal journey!)
+3. Data stored in Python code and written at runtime (unconventional design)
+4. No standalone option to just check metro timings
 CRITICAL ISSUES:
 1. No schedule logic module (missing entire Phase 2 Part A)
 2. Fare calculation is completely wrong (990 rupees!)
@@ -149,14 +172,31 @@ def fare_calculator(source,destination):
             break
     return fare
 ```
-The function adds the fare value (11) for every station between source and destination. This is wrong. It should calculate based on:
-- Number of stations traveled
-- DMRC fare slabs
+ThEVALUATION SUMMARY:
+After thorough testing, this submission is significantly better than initially evaluated:
 
-Result: Shows 990 rupees for a normal journey!
+CORRECTED FINDINGS:
+1. Schedule logic DOES EXIST and works correctly (was marked 0, now 20/30)
+2. Documentation should get full marks per guidelines (was 7, now 10/10)
+3. Code quality slightly better than assessed (was 11, now 12/15)
+
+SCORE CHANGE: 58/100 → 82/100 (Regular)
+WITH BONUS: 63/120 → 87/120
 
 RECOMMENDATION:
-Student has decent understanding of journey planning but:
+Student demonstrates solid understanding of:
+- Metro scheduling with peak/off-peak logic
+- Journey planning with interchange handling
+- Bidirectional pathfinding algorithms
+- Time calculations and datetime manipulation
+
+Areas for improvement:
+- Implement proper menu system for separate modules
+- Fix fare calculation algorithm completely
+- Use proper data file management (don't write at runtime)
+- Better error handling and testing
+
+Overall: Good working implementation with one structural flaw (no menu)
 1. Failed to implement schedule timing module
 2. Fare calculation is fundamentally broken
 3. Unusual data management approach needs improvement
