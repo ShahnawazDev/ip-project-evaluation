@@ -117,7 +117,7 @@ def plan_journey(source, destination, start_time, stations_map):
     starting_line = next((ln for ln, data in stations_map.items() if any(s['station'] == source for s in data)), None)
     ending_line = next((ln for ln, data in stations_map.items() if any(s['station'] == destination for s in data)), None)
 
-    if starting_line or not ending_line:
+    if not starting_line or not ending_line:
         print("Error: Source or Destination station not found.")
         return
 
