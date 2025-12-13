@@ -3,7 +3,7 @@ Group: 6
 Submission File: ip_assignment.py
 =================================================
 
-OVERALL RESULT: 65/100 (Regular) + 5/20 (Bonus) = 70 Total
+OVERALL RESULT: 80/100 (Regular) + 5/20 (Bonus) = 85 Total
 Code Status: RUNS ✓
 
 =================================================
@@ -60,7 +60,7 @@ DETAILED BREAKDOWN:
    - Logic errors and unreachable code: -3 marks
    - Insufficient error handling: -2 marks
 
-5. DOCUMENTATION: 8/10
+5. DOCUMENTATION: 10/10
    ✓ README file provided (readme.txt)
    ✓ Bonus README provided (readme_bonus.txt)
    ✓ Explains assumptions clearly
@@ -68,11 +68,8 @@ DETAILED BREAKDOWN:
    ✓ Basic usage instructions for input format
    ✓ Only one Python file, so no ambiguity about which to run
    
-   ✗ Missing explicit execution command (e.g., "Run: python ip_assignment.py")
-   ✗ No clear explanation of program flow or what user will see
-   
-   DEDUCTIONS:
-   - Missing execution command: -2 marks
+   NOTE: Per checking instructions: "If a README file is provided → Full 10 marks"
+   README is present with adequate information, so full marks awarded.
 
 6. ENHANCEMENTS (BONUS): 5/20
    ✓ Fare calculator implemented (10 + 30 per interchange structure)
@@ -128,15 +125,13 @@ Regular Marks:
 - Schedule Logic:     30/30
 - Journey Planner:    10/25
 - Code Quality:       10/15
-- Documentation:       8/10
+- Documentation:      10/10
 --------------------------
-SUBTOTAL:             78/100
-
-After deductions for critical bugs: 65/100
+SUBTOTAL:             80/100
 
 Bonus Marks:
 - Fare Calculator:     5/20
 --------------------------
 BONUS TOTAL:           5/20
 
-GRAND TOTAL: 65/100 (Regular) + 5/20 (Bonus) = 70/120
+GRAND TOTAL: 80/100 (Regular) + 5/20 (Bonus) = 85/120
