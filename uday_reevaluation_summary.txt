@@ -1,0 +1,103 @@
+REEVALUATION SUMMARY: UDAY SINGH TONK (2025519)
+Date: December 13, 2025
+================================================================
+
+SCORE CHANGES:
+--------------
+Component              Original  →  Corrected  Change
+-------------------------------------------------------
+Data Collection        18/20     →  19/20      +1
+Schedule Logic         25/30     →  30/30      +5
+Journey Planner        20/25     →  20/25       0
+Code Quality           13/15     →  14/15      +1
+Documentation           9/10     →  10/10      +1
+Bonus Features          7/15     →   7/15       0
+-------------------------------------------------------
+REGULAR TOTAL          85/100    →  93/100     +8
+INCLUDING BONUS        92/115    →  100/115    +8
+
+================================================================
+
+ERRORS FOUND IN ORIGINAL EVALUATION:
+------------------------------------
+
+1. DATA COLLECTION (-1 point incorrectly deducted)
+   ❌ CLAIMED: "Hardcoded path: C:\Users\Vineet\Desktop\assignment\Data.txt"
+   ✅ ACTUAL: Line 43 uses `f=open(r"Data.txt","r")` - RELATIVE PATH
+   
+   The claim of hardcoded absolute path was FACTUALLY INCORRECT.
+   Only valid deduction: non-standard filename (Data.txt vs metro_data.txt)
+   
+2. SCHEDULE LOGIC (-5 points incorrectly deducted)
+   ❌ CLAIMED: "Requires y/n confirmation (extra step)" in schedule logic
+   ✅ ACTUAL: y/n confirmation is at line 738 in Menu() for program continuation,
+              NOT part of Metro_Timing() function
+   
+   Schedule logic is PERFECT:
+   - Peak hours (8-10, 17-19): 4 minute intervals ✓
+   - Off-peak hours: 8 minute intervals ✓
+   - Shows both directions ✓
+   - Shows 3 subsequent trains ✓
+   - Accessible via menu ✓
+   - No y/n in the schedule function itself ✓
+   
+   DESERVES FULL 30/30 marks.
+
+3. CODE QUALITY (-1 point incorrectly deducted)
+   ❌ CLAIMED: "Hardcoded absolute Windows path" as negative
+   ✅ ACTUAL: No hardcoded path exists in code
+   
+   Code quality is professional with excellent OOP design (Time class).
+   Only minor issue: limited inline comments.
+
+4. DOCUMENTATION (-1 point incorrectly deducted)  
+   ❌ CLAIMED: 9/10 with vague "Could include more details"
+   ✅ ACTUAL: Guidelines state "If README provided → Full 10 marks"
+   
+   Student provided TWO well-written READMEs (main + bonus).
+   No partial credit specified in guidelines.
+
+================================================================
+
+VERIFIED STRENGTHS:
+-------------------
+✓ 81 stations of comprehensive data (Blue 56, Magenta 25)
+✓ Sophisticated Time class with proper OOP
+✓ Perfect peak/off-peak schedule logic
+✓ 741 lines of well-organized code
+✓ Professional menu system
+✓ Same-line journey planner works flawlessly
+✓ Optimal interchange route selection algorithm
+✓ Fare calculator with correct DMRC tiers
+✓ Two comprehensive README files
+✓ Proper error handling (service hours, data parsing)
+✓ NO hardcoded paths
+
+VERIFIED ISSUES:
+----------------
+❌ Botanical Garden data duplication causes interchange logic bugs
+❌ Some interchange time calculations incorrect
+❌ Limited inline code comments
+❌ Non-standard data filename
+
+================================================================
+
+CONCLUSION:
+-----------
+Original evaluation: 92/115 (85 regular + 7 bonus)
+Corrected evaluation: 100/115 (93 regular + 7 bonus)
+
+This is one of the STRONGEST submissions in the batch. The original 
+evaluation contained multiple factual errors that unfairly penalized 
+the student. The corrected score of 100/115 accurately reflects the 
+high quality and sophistication of this work.
+
+The Time class implementation alone demonstrates programming maturity 
+beyond typical introductory assignments. This is production-quality 
+OOP code that deserves recognition.
+
+All corrections have been updated in:
+- uday_result.txt (detailed evaluation report)
+- results_all.csv (summary scores and comments)
+
+================================================================
