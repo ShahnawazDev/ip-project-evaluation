@@ -1,0 +1,72 @@
+SCHEDULE LOGIC VERIFICATION FOR PRASHUN JHA
+============================================
+
+ASSIGNMENT REQUIREMENT (Phase 2 Part A):
+-----------------------------------------
+"Metro Timings Module" - A separate feature where user can check:
+  Input: Line = Blue, Station = Rajiv Chowk, Current time = 09:18
+  Output: Next metro at 09:20, Subsequent metros at 09:24, 09:28, ...
+
+This should work WITHOUT planning a journey (no destination needed).
+
+PRASHUN'S CODE STRUCTURE:
+--------------------------
+1. Input Requirements (lines 12-15):
+   - start_station = input("Enter current station: ")
+   - end_station = input("Enter station where you want to go: ")  ← REQUIRES DESTINATION
+   - time1 = input("enter current_time1: ")
+   - ampm = input("enter am or pm: ")
+
+2. Functions Present:
+   - check_gap(h, ampm) - Calculates frequency (4 min peak, 8 min off-peak)
+   - add_minutes(h, m, val) - Adds time correctly
+   - metro_simulator(start, end, time, ampm) - Journey planner with embedded schedule logic
+
+3. Menu System: NONE
+   - No options to choose between "Check schedule" vs "Plan journey"
+   - Program goes directly to journey planning
+
+TEST RESULTS:
+-------------
+Test 1: Can we check schedule by entering same station for both start and end?
+   Input: Rajiv Chowk -> Rajiv Chowk at 09:18 am
+   Result: IndexError at line 162 (path[1] doesn't exist)
+   Conclusion: Code CRASHES when trying to use for schedule checking
+
+Test 2: Can we skip destination input?
+   Result: NO - destination is mandatory input at line 13
+   
+Test 3: Is there a separate schedule checking function?
+   Result: NO - only metro_simulator() which requires both start AND end
+
+CRITICAL FINDINGS:
+------------------
+✓ The underlying logic EXISTS:
+  - check_gap() correctly calculates 4/8 minute frequency
+  - add_minutes() works properly
+  - Peak hour detection works (8-10 AM, 5-7 PM)
+
+✗ But it's NOT accessible as a separate module:
+  - User CANNOT check schedule without entering destination
+  - No menu to choose schedule-only mode
+  - Schedule logic is embedded INSIDE journey planner only
+  - Cannot be used independently
+
+COMPARISON TO ASSIGNMENT REQUIREMENT:
+--------------------------------------
+Assignment says: "Metro Timings Module" (Part A) and "Ride journey planner" (Part B)
+These should be TWO SEPARATE functionalities.
+
+Prashun implemented: ONE functionality (journey planner) with schedule logic embedded.
+
+VERDICT:
+--------
+The evaluation of 0/30 for Schedule Logic is CORRECT.
+
+While the underlying schedule calculation logic is implemented correctly,
+it is NOT available as a separate, standalone module as required by the
+assignment. Users cannot check "next metro at station X" without planning
+a full journey.
+
+This is a fundamental architectural issue - the assignment requires TWO
+separate modules, but only ONE (journey planner) was implemented.

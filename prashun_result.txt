@@ -9,9 +9,9 @@ FINAL SCORES:
 - Schedule Logic: 0/30
 - Journey Planner: 22/25
 - Code Quality: 10/15
-- Documentation: 8/10
+- Documentation: 10/10
 - Bonus: 0/15
-TOTAL: 57/100
+TOTAL: 59/100
 
 ========================================
 
@@ -86,17 +86,19 @@ Negatives:
 - Could use more comments
 Deduction: -5 marks
 
-5. DOCUMENTATION (8/10)
-✓ Good README.md file
+5. DOCUMENTATION (10/10)
+✓ Good README.md file provided
 ✓ Explains approach and design decisions
 ✓ Mentions DMRC website as data source
 ✓ Discusses why list-of-lists was chosen over dictionary
 ✓ Clear feature description
+✓ Provides context on how the program works
 
-ISSUES:
-- Doesn't mention hardcoded path issue
-- Lacks clear execution instructions
-Deduction: -2 marks
+Per evaluation guidelines: "If a README file is provided → Full 10 marks for documentation"
+
+MINOR ISSUES (not penalized per guidelines):
+- Could include more explicit step-by-step execution instructions
+- No mention of hardcoded path issue (though evaluator fixed it)
 
 6. BONUS FEATURES (0/15)
 ✗ No additional metro lines
