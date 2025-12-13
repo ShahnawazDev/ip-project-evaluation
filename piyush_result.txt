@@ -1,31 +1,36 @@
 ========================================
-DELHI METRO SIMULATOR - EVALUATION REPORT
+DELHI METRO SIMULATOR - EVALUATION REPORT (REEVALUATED)
 Student: Piyush Saini (2025372)
 Date: December 13, 2025
+Reevaluation Date: December 13, 2025
 ========================================
 
 FINAL SCORES:
-- Data Collection: 15/20
+- Data Collection: 20/20 [CORRECTED from 15/20]
 - Schedule Logic: 22/30
 - Journey Planner: 23/25
 - Code Quality: 12/15
-- Documentation: 7/10
-- Bonus: 0/15
-TOTAL: 79/100
+- Documentation: 10/10 [CORRECTED from 7/10]
+- Bonus: 3/15 [CORRECTED from 0/15]
+TOTAL: 90/100 (93/115 with bonus)
+PREVIOUS EVALUATION: 79/100
 
 ========================================
 
-1. DATA COLLECTION (15/20)
-✓ Blue Line (named as Blue3 and Blue4)
-✓ Magenta Line present
-✓ Format: "Station Time Interchange" (non-standard but parseable)
-✓ Travel times included
-ISSUES:
-- Only 87 lines of data (VERY incomplete)
-- Missing many stations on both lines
-- Unusual naming (Blue3, Blue4 instead of standard Blue Line)
-- Data file appears truncated
-Deduction: -5 marks
+1. DATA COLLECTION (20/20) [CORRECTED]
+✓ Blue Line complete (58 total stations: 50 on main line + 8 on Vaishali branch)
+✓ Magenta Line complete (26 stations)
+✓ Total: 84 stations across all required lines
+✓ Format: "Station Interchange TravelTime" (parseable and functional)
+✓ Travel times included for all stations
+✓ Interchange points correctly marked (Janakpuri West, Botanical Garden, Yamuna Bank)
+
+PREVIOUS EVALUATION ERROR CORRECTED:
+- Original evaluation incorrectly stated "only 87 lines of data (VERY incomplete)"
+- Actual data: 86 lines total, containing 84 complete station records
+- This is FULL coverage of Blue Line (both branches) and Magenta Line as required
+- No deduction warranted
+Deduction: 0 marks (Full marks: 20/20)
 
 2. SCHEDULE LOGIC (22/30)
 ✓ Works but has timing BUG
@@ -73,32 +78,64 @@ Negatives:
 - Could be more efficient in some loops
 Deduction: -3 marks
 
-5. DOCUMENTATION (7/10)
-✓ Has README files (PDF format - Readme.pdf and Bonus_Readme.pdf)
+5. DOCUMENTATION (10/10) [CORRECTED]
+✓ Has TWO README files (Readme.pdf and Bonus_Readme.pdf)
+✓ Main README: 83KB - comprehensive documentation
+✓ Bonus README: 42KB - documents additional features
+
+PREVIOUS EVALUATION ERROR CORRECTED:
+- Per checking_instruction.txt: "If a README file is provided → Full 10 marks for documentation"
+- PDF format is acceptable (other students with PDF READMEs received full marks)
+- Bonus README correctly describes the fare calculation feature that IS implemented
+Deduction: 0 marks (Full marks: 10/10)
+
+6. BONUS FEATURES (3/15) [CORRECTED]
+✓ FARE CALCULATION IMPLEMENTED (lines 449-462)
+  - Uses time-based fare structure (10/23/43/60/90 rupees)
+  - Based on total travel time
+  - Implemented for two-interchange journeys
+
+PARTIAL IMPLEMENTATION:
+- Fare calculator only works for two-interchange routes
+- Not implemented for same-line or one-interchange journeys
+- CCOMPLETE data collection (84 stations) - contrary to original evaluation
+2. Journey planner is EXCELLENT with detailed station-by-station output
+3. Clean, modular code structure with well-named functions
+4. Sophisticated multi-line routing with interchange1() and interchange2()
+5. Handles same-line, one-interchange, and two-interchange journeys correctly
+6. Fare calculator implemented (partial)
+7. Good documentation with two README files
+8. Proper menu system with clear user interface
+
 ISSUES:
-- PDF format not ideal
-- Bonus README exists but no bonus features implemented
-- Lacks clear execution instructions
-Deduction: -3 marks
+1. Schedule logic has timing bug: shows duplicate times (09:21, 09:25) from backward direction
+   - The nextrain() function adds trains from both directions when direction=True
+   - This creates incorrect intermediate times that don't align with 4-min peak intervals
+   - Bug is in lines 76-98 where backward direction trains are calculated
+2. Fare calculator only works for two-interchange journeys (not same-line or one-interchange)
 
-6. BONUS FEATURES (0/15)
-✗ No additional metro lines beyond required
-✗ No fare calculation
-✗ Bonus README exists but features not implemented
+CODE REVIEW:
+The nextrain() function bug (lines 76-98):
+- When direction=True, calculates arrivals from BOTH directions
+- Forward: dep + traintime1
+- Backward: dep + o2 (where o2 = totaltime - traintime1)
+- Problem: Both use the SAME departure times, causing spurious intermediate arrivals
+- This creates times like 09:21, 09:25 that don't match the proper 4-minute frequency
+- Fix would be to either: (a) use direction=False for single-station queries, or
+  (b) properly offset the backward direction departures
 
-========================================
-DETAILED ANALYSIS:
+REEVALUATION SUMMARY:
+Original evaluation had THREE significant errors:
+1. Data collection wrongly marked as incomplete (-5 marks incorrectly deducted)
+2. Documentation wrongly marked as incomplete (-3 marks incorrectly deducted)
+3. Bonus fare feature overlooked (+3 marks not awarded)
 
-STRENGTHS:
-1. Journey planner is excellent with detailed station-by-station output
-2. Clean, modular code structure
-3. Good understanding of graph traversal for route finding
-4. interchange1() and interchange2() show sophisticated multi-line routing
+CORRECTED TOTAL: 90/100 (93/115 with bonus)
+PREVIOUS TOTAL: 79/100
+DIFFERENCE: +11 regular marks, +3 bonus marks, +14 total
 
-ISSUES:
-1. Schedule logic has timing bugs (shows incorrect intermediate times)
-2. Very incomplete data file (only 87 lines)
-3. Bonus features mentioned in README but not implemented
+RECOMMENDATION:
+This is strong work with complete data collection, excellent journey planning, and partial bonus implementation. The schedule logic bug is the main issue but doesn't prevent core functionality. Overall quality is much better than originally evaluated
 
 CODE REVIEW:
 The nextrain() function has the main bug:
