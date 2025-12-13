@@ -1,0 +1,209 @@
+========================================
+DELHI METRO SIMULATOR - EVALUATION REPORT
+Student: Vivaswat Kumar (2025556)
+Date: December 13, 2025
+========================================
+
+FINAL SCORES:
+- Data Collection: 18/20
+- Schedule Logic: 27/30
+- Journey Planner: 20/25
+- Code Quality: 11/15
+- Documentation: 8/10
+- Bonus: 7/15
+TOTAL: 91/115
+
+========================================
+
+1. DATA COLLECTION (18/20)
+✓ GOOD DATA COLLECTION
+✓ Blue Line (main and Vaishali branch)
+✓ Magenta Line
+✓ CSV format with proper structure
+✓ Travel times included
+✓ Station names with interchange points
+
+ISSUES:
+- Data completeness could be better
+- Some formatting inconsistencies
+Deduction: -2 marks
+
+2. SCHEDULE LOGIC (27/30)
+✓ WORKS WITH MENU!
+
+MENU SYSTEM:
+```
+--------DELHI METRO SIMULATOR--------
+1. Find Next Train
+2. Plan Route
+3. Check Fare
+4. Exit
+```
+
+Input sequence for Option 1:
+- Metro Line (blue/blue-vaishali/magenta)
+- Current Station
+- Time (HH:MM)
+
+OUTPUT FEATURES:
+✓ Shows next train time
+✓ Displays multiple upcoming trains
+✓ Shows direction (which terminal)
+✓ Peak hour detection works
+✓ Clean, user-friendly output
+
+Example output:
+```
+Next Train: 09:20
+Direction: Towards [Terminal]
+Upcoming trains: 09:24, 09:28, 09:32...
+```
+
+✓ Proper time calculations
+✓ 4-minute intervals during peak hours
+✓ 8-minute intervals off-peak
+
+Minor issues:
+- Some edge case handling could be better
+- Could show both directions like some other submissions
+Deduction: -3 marks
+
+3. JOURNEY PLANNER (20/25)
+✓ WORKS FOR SAME-LINE AND INTERCHANGE!
+
+Based on testing and code review:
+✓ Option 2: Plan Route
+✓ Handles same-line journeys
+✓ Handles interchange journeys
+✓ Shows complete journey plan:
+  - Starting station and line
+  - Next metro time
+  - Arrival times at key stations
+  - Transfer details if needed
+  - Final arrival time
+  - Total travel time
+
+GOOD FEATURES:
++ Clean output format
++ Proper interchange detection
++ Accurate time calculations
++ Shows all necessary journey details
+
+ISSUES:
+- Some interchange scenarios may have edge cases
+- Limited testing of complex multi-interchange routes
+Deduction: -5 marks
+
+4. CODE QUALITY (11/15)
+Positives:
++ MENU SYSTEM with 4 options (excellent!)
++ Good function modularization
++ Clean variable names
++ Proper data structures
++ Good separation of schedule/journey/fare modules
++ Readable code structure
+
+Negatives:
+- Some code duplication
+- Could use more comments
+- Error handling could be better
+- Line naming (blue/blue-vaishali) could be clearer
+Deduction: -4 marks
+
+5. DOCUMENTATION (8/10)
+✓ EXCELLENT: TWO README files!
+✓ README.txt (main assignment)
+✓ FairREADME.txt (fare/bonus features)
+
+Good documentation approach with separate files for main and bonus.
+
+ISSUES:
+- Could include more execution details
+- Input format examples would help
+Deduction: -2 marks
+
+6. BONUS FEATURES (7/15)
+✓ FARE CALCULATOR: Fully implemented (7 marks)
+  - Menu Option 3: Check Fare
+  - Calculates fare between stations
+  - Integrated into journey planner
+  - Shows fare with journey plan
+
+EXCELLENT INTEGRATION!
+
+✗ No additional metro lines beyond required
+
+Would be higher with more bonus lines.
+
+========================================
+DETAILED ANALYSIS:
+
+STRENGTHS:
+1. COMPLETE MENU SYSTEM with 4 options
+2. Schedule logic works well with good output
+3. Journey planner handles key scenarios
+4. Fare calculator fully functional
+5. Two README files (main + bonus)
+6. Clean code structure
+7. Good user experience
+
+UNIQUE FEATURES:
+- 4-option menu (schedule, journey, fare, exit)
+- Separate README for fare feature (FairREADME.txt)
+- Clean, intuitive interface
+- Direction information in schedule
+
+ISSUES:
+1. Could handle more complex interchange scenarios
+2. No additional metro lines (just required Blue + Magenta)
+3. Some edge case handling needed
+
+CODE REVIEW:
+
+MENU STRUCTURE (EXCELLENT):
+```
+1. Find Next Train - Schedule logic
+2. Plan Route - Journey planner
+3. Check Fare - Bonus feature
+4. Exit - Clean exit
+```
+This is exactly what's expected! Professional interface.
+
+SCHEDULE LOGIC:
++ Calculates next train correctly
++ Shows direction (towards terminal)
++ Multiple upcoming trains displayed
++ Peak/off-peak logic working
+
+JOURNEY PLANNER:
++ Route finding working
++ Interchange detection
++ Time calculations accurate
++ Good output format
+
+FARE CALCULATOR (BONUS):
++ Standalone option in menu
++ Calculates fare based on distance/stations
++ Shows fare with journey plan
++ Clean integration
+
+The fare calculator being a separate menu option (not just embedded in journey) shows good design thinking!
+
+RECOMMENDATION:
+This is a STRONG SUBMISSION with excellent user interface design. The 4-option menu is professional and intuitive. All core features work. Fare calculator is well-integrated.
+
+Improvements possible:
+1. Add more bonus metro lines
+2. Handle more complex interchange scenarios
+3. Better edge case handling
+4. More detailed comments
+
+The separation of fare feature into its own menu option and README shows good modular thinking. Overall a well-rounded, user-friendly implementation.
+
+This submission demonstrates:
+- Good UX design
+- Clean code structure
+- Complete feature implementation
+- Professional presentation
+
+One of the better submissions in the class!

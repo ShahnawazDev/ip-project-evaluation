@@ -1,0 +1,173 @@
+========================================
+DELHI METRO SIMULATOR - EVALUATION REPORT
+Student: Satwik Singh (2025461)
+Date: December 13, 2025
+========================================
+
+FINAL SCORES:
+- Data Collection: 18/20
+- Schedule Logic: 25/30
+- Journey Planner: 0/25
+- Code Quality: 12/15
+- Documentation: 10/10
+- Bonus: 10/15
+TOTAL: 75/115
+
+========================================
+
+1. DATA COLLECTION (18/20)
+✓ GOOD COMPREHENSIVE DATA
+✓ Blue Line (Vaishali and Noida branches)
+✓ Magenta Line
+✓ Red Line (BONUS)
+✓ Orange Line (BONUS)
+✓ CSV format with proper headers
+✓ Travel times included
+✓ Interchange points marked
+
+ISSUES:
+- Initial hardcoded path: "C:\Users\LENOVO\Desktop\college\metro_data.txt"
+  (Fixed for testing)
+- Some data parsing complexity
+Deduction: -2 marks
+
+2. SCHEDULE LOGIC (25/30)
+✓ WORKS WITH MENU!
+
+Test: Option 1, Station: Rajiv Chowk, Time: 09:18
+Output shows:
+```
+Next Train is at Rajiv Chowk
+Current Time: 09:18
+
+Blue Line (Vaishali Branch):
+  1. 09:21 - Towards Vaishali
+  2. 09:22 - Towards Dwarka Sector 21
+  3. 09:25 - Towards Vaishali
+  4. 09:26 - Towards Dwarka Sector 21
+  5. 09:29 - Towards Vaishali
+```
+
+✓ EXCELLENT FEATURE: Shows trains in BOTH DIRECTIONS!
+✓ Shows 5 upcoming trains
+✓ Indicates which direction each train is going
+✓ User-friendly output
+
+ISSUES:
+- Some time calculations appear slightly off
+- Doesn't distinguish between lines clearly when station is on multiple lines
+Deduction: -5 marks
+
+3. JOURNEY PLANNER (0/25)
+✗ CRASHES WITH IndexError
+
+Test: Dwarka → Botanical Garden
+Error: IndexError: list index out of range (line 179)
+
+The planJourney() function calls:
+- singleLine() → nextstattrain() → crashes accessing terminals[1]
+
+CODE ISSUE:
+```python
+def nextstattrain(keyofline, src, dest, starttime):
+    ...
+    terminal = terminals[1]  # <-- CRASHES HERE
+```
+
+The terminals list doesn't have index 1 in some cases.
+
+Journey planner has sophisticated multi-interchange logic (twointer() function) but crashes on basic same-line journey!
+
+This is a CRITICAL BUG that makes the feature non-functional.
+
+4. CODE QUALITY (12/15)
+Positives:
++ 4-OPTION MENU SYSTEM (excellent!)
++ Good code structure with many helper functions
++ convert() for time conversion
++ Sophisticated routing logic attempted
++ Good variable naming
++ Uses proper data structures (dictionaries, sets)
++ BlueVaishali and BlueNoida separation is smart
+
+Negatives:
+- Hardcoded path initially
+- Complex nested logic difficult to debug
+- IndexError shows insufficient testing
+Deduction: -3 marks
+
+5. DOCUMENTATION (10/10)
+✓ EXCELLENT DOCUMENTATION
+✓ Has video demo (DMRC program run.mp4)
+✓ Two PDF READMEs:
+  - ReadMe (Main Assignment).pdf
+  - ReadMe (Bonus Component).pdf
+✓ Video shows program in action
+✓ Comprehensive documentation approach
+
+PERFECT SCORE for documentation effort
+
+6. BONUS FEATURES (10/15)
+✓ RED LINE: Implemented (5 marks)
+✓ ORANGE LINE: Implemented (5 marks)
+✓ FARE CALCULATOR: Menu option 3 exists (but crashed during test)
+
+Would be full marks but:
+- Fare calculator couldn't be fully tested due to crashes
+- Journey planner crashes affect overall bonus functionality
+
+Deduction: -5 marks
+
+========================================
+DETAILED ANALYSIS:
+
+STRENGTHS:
+1. EXCELLENT MENU SYSTEM with 4 options
+2. Schedule logic shows trains in both directions (unique feature!)
+3. Comprehensive data with bonus lines
+4. Video documentation is creative and helpful
+5. Sophisticated code structure with proper data modeling
+6. Good understanding of complex routing scenarios
+
+CRITICAL ISSUES:
+1. Journey planner crashes with IndexError (line 179)
+2. Hardcoded absolute path (though fixable)
+3. Insufficient testing - basic same-line journey fails
+
+CODE REVIEW:
+
+MENU SYSTEM (EXCELLENT):
+```
+Delhi Metro Menu
+(1) Check the next metro
+(2) Plan your journey  
+(3) Calculate fare for your travel
+(4) Exit
+```
+This is exactly what's expected!
+
+SCHEDULE LOGIC (VERY GOOD):
+The bidirectional display is a great feature:
+- Shows trains going to Vaishali
+- Shows trains going to Dwarka Sector 21
+- User can see all options
+
+JOURNEY PLANNER (BROKEN):
+The code attempts to handle:
+- Same line (singleLine function)
+- One interchange (oneinter function)
+- Two interchanges (twointer function)
+
+But crashes on basic same-line journey due to array index bug.
+
+Bug location:
+```python
+def nextstattrain(keyofline, src, dest, starttime):
+    ...
+    terminals = termm.get(keyofline, [])
+    ...
+    terminal = terminals[1]  # <-- Assumes 2 terminals, but some lines have 1
+```
+
+RECOMMENDATION:
+Student shows excellent understanding of UI/UX (menu system, bidirectional display) and has attempted sophisticated multi-interchange routing. However, the IndexError bug is critical and shows lack of testing. With bug fixes, this could be a top-tier submission. The documentation with video is commendable. Needs better error handling and testing.

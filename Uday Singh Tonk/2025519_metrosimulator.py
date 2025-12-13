@@ -39,7 +39,7 @@ class Time:
     def __str__(self):
         return f"{self.hour:02}:{self.min:02}"
     
-f=open(r"C:\Users\Vineet\Desktop\assignment\Data.txt","r")
+f=open(r"Data.txt","r")
 a=f.readlines()
 for i in range(len(a)):
     a[i]=a[i][:-1:]

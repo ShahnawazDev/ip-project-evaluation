@@ -1,0 +1,165 @@
+========================================
+DELHI METRO SIMULATOR - EVALUATION REPORT
+Student: Sadaanant (sadaanant25444@iiitd.ac.in)
+Date: December 13, 2025
+========================================
+
+FINAL SCORES:
+- Data Collection: 17/20
+- Schedule Logic: 0/30
+- Journey Planner: 23/25
+- Code Quality: 11/15
+- Documentation: 7/10
+- Bonus: 5/15
+TOTAL: 63/105
+
+========================================
+
+1. DATA COLLECTION (17/20)
+✓ UNUSUAL APPROACH: Data written to file at runtime!
+✓ Blue Line: Complete with Vaishali branch (56 stations in code)
+✓ Magenta Line: Complete (25 stations in code)
+✓ Hardcoded in Python lists: blue_line_data[] and magenta[]
+✓ Format: "Line, Station, NextStation, TravelTime, Interchange, Fare"
+✓ Includes fare data in source
+
+ISSUES:
+- Data is in Python code, not a separate text file initially
+- Written to metro_data.txt at runtime (lines 1-89)
+- This is unusual and not best practice
+- Creates/overwrites file each run
+Deduction: -3 marks
+
+2. SCHEDULE LOGIC (0/30)
+✗ NOT IMPLEMENTED AS SEPARATE MODULE
+No standalone schedule timing feature.
+Program only does journey planning, not individual station timing queries.
+
+User cannot check "when is next metro at station X" without specifying a destination.
+
+Required functionality completely missing.
+
+3. JOURNEY PLANNER (23/25)
+✓ WORKS WELL!
+
+Test: Dwarka → Botanical Garden at 08:22
+Output:
+- Next metro at 8 : 24
+- Journey Plan:
+- Start at Dwarka ( Blue Line )
+- Arrive at Janakpuri West at 8 : 32
+- Transfer to Magenta Line
+- Next Magenta metro departs at 8 : 36
+- Arrive at Botanical Garden at 9 : 43
+- Total travel time: 81 minutes
+- Total Fare: 990
+
+✓ Shows complete journey plan
+✓ Handles line changes correctly
+✓ Calculates interchange timing
+✓ Shows transfer station
+
+ISSUES:
+- FARE CALCULATION COMPLETELY WRONG: Shows Rs. 990 for a journey that should cost Rs. 40-50!
+- The fare_calculator() function adds up all individual fares incorrectly
+- Appears to be summing fare column values (all 11s) multiple times
+
+Minor issue:
+- Spacing in time display (8 : 24 instead of 8:24)
+
+Deduction: -2 marks (would be more but fare is bonus)
+
+4. CODE QUALITY (11/15)
+Positives:
++ Uses datetime module properly
++ Imports and time handling are correct
++ Creates reverse_data for bidirectional travel (smart approach)
++ Function modularization (fare_calculator defined)
++ Good variable names
+
+Negatives:
+- Writing data to file at runtime is poor practice
+- No menu system (expects source, dest, time upfront)
+- Fare calculation logic is fundamentally broken
+- Limited error handling
+Deduction: -4 marks
+
+5. DOCUMENTATION (7/10)
+✓ Has READMEFILE.pdf
+
+ISSUES:
+- PDF format not ideal (text preferred)
+- Couldn't fully review PDF content
+- Doesn't explain unusual data file creation approach
+- Lacks clear execution instructions
+Deduction: -3 marks
+
+6. BONUS FEATURES (5/15)
+✓ FARE CALCULATION ATTEMPTED (5 marks)
+  BUT COMPLETELY WRONG IMPLEMENTATION
+  - fare_calculator() function exists
+  - Shows fare in output
+  - But calculation is incorrect (990 instead of ~40)
+  - Appears to sum all fare values in path, not calculate properly
+
+✗ No additional metro lines
+✗ No other bonus features
+
+Partial credit: 5/15 for attempt
+
+========================================
+DETAILED ANALYSIS:
+
+STRENGTHS:
+1. Journey planner works for routing
+2. Handles line changes correctly
+3. Creates bidirectional data (reverse_data) cleverly
+4. Shows transfer stations and timing
+5. Uses datetime module appropriately
+
+CRITICAL ISSUES:
+1. No schedule logic module (missing entire Phase 2 Part A)
+2. Fare calculation is completely wrong (990 rupees!)
+3. Data stored in Python code and written at runtime (poor design)
+4. No menu interface
+
+CODE REVIEW:
+
+UNUSUAL DESIGN CHOICE:
+Lines 1-89 write data to metro_data.txt every time program runs:
+```python
+f=open("metro_data.txt","w")
+f.writelines(blue_line_data)
+f.writelines(magenta)
+f.close()
+```
+This is inefficient and unconventional. Data should be in a separate file.
+
+FARE CALCULATION BUG:
+```python
+def fare_calculator(source,destination):
+    fare= 0
+    found= False
+    for i in working_data:
+        if(i[1]==source and i[0]==line1):
+            found = True
+        if(found==True and i[0]==line1):
+            fare += i[5]  # <-- Adds 11 for every station!
+        if(i[2]==destination and found and i[0]==line1):
+            break
+    return fare
+```
+The function adds the fare value (11) for every station between source and destination. This is wrong. It should calculate based on:
+- Number of stations traveled
+- DMRC fare slabs
+
+Result: Shows 990 rupees for a normal journey!
+
+RECOMMENDATION:
+Student has decent understanding of journey planning but:
+1. Failed to implement schedule timing module
+2. Fare calculation is fundamentally broken
+3. Unusual data management approach needs improvement
+4. Needs menu system and better testing
+
+The working journey planner saves the score from being very low.

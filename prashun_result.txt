@@ -1,0 +1,130 @@
+========================================
+DELHI METRO SIMULATOR - EVALUATION REPORT
+Student: Prashun Jha (2025390)
+Date: December 13, 2025
+========================================
+
+FINAL SCORES:
+- Data Collection: 17/20
+- Schedule Logic: 0/30
+- Journey Planner: 22/25
+- Code Quality: 10/15
+- Documentation: 8/10
+- Bonus: 0/15
+TOTAL: 57/100
+
+========================================
+
+1. DATA COLLECTION (17/20)
+✓ Blue-3 Line (main Blue Line)
+✓ Blue-4 Line (Vaishali branch)
+✓ Magenta Line complete
+✓ 81 stations total with good coverage
+✓ CSV format with proper headers
+✓ Travel times realistic (1-5 minutes)
+✓ Interchange points marked
+ISSUES:
+- Slightly incomplete coverage of full network
+- Screenshot included but not needed
+Deduction: -3 marks
+
+2. SCHEDULE LOGIC (0/30)
+✗ NOT IMPLEMENTED
+The code only implements journey planning, not a separate schedule timing module.
+User cannot check "when is next metro at station X" independently.
+All timing calculations are embedded within journey planner only.
+
+Required functionality missing:
+- No standalone schedule timing query
+- No "next metro at station" feature
+- No subsequent metro times display
+
+This is a CRITICAL OMISSION of core requirement.
+
+3. JOURNEY PLANNER (22/25)
+✓ WORKS WELL!
+
+Test 1 - Same Line: Dwarka Sector - 21 → Botanical Garden at 08:22
+Output:
+- Journey Plan shown
+- Next metro at 08:24
+- Arrive at Botanical Garden at 09:43
+- Total travel time: 81 minutes
+✓ Correct calculation
+
+Test 2 - Interchange: Dwarka Sector - 21 → Hauz Khas
+Output:
+- Shows transfer at Botanical Garden
+- Adds 10 minutes for walking/interchange
+- Next Magenta metro departs at 09:56
+- Final arrival at Hauz Khas at 10:30
+✓ Handles interchange correctly
+
+EXCELLENT FEATURES:
++ BFS-style pathfinding algorithm
++ Handles forward/backward traversal on lines
++ Proper interchange detection
++ 10-minute interchange delay included
+
+Minor issues:
+- Uses 12-hour time format requiring AM/PM input (non-standard)
+Deduction: -3 marks
+
+4. CODE QUALITY (10/15)
+Positives:
++ Good modular function design
++ BFS pathfinding is well-implemented
++ check_gap() function handles peak hours correctly
++ add_minutes() helper function is clean
++ Good variable names
+
+Negatives:
+- HARDCODED ABSOLUTE PATH: "/Users/prashunjha/Downloads/delhi_metro/metro_data.txt"
+  This prevents code from running on any other system!
+- No menu system (expects all inputs upfront)
+- Some redundant nested loops
+- Could use more comments
+Deduction: -5 marks
+
+5. DOCUMENTATION (8/10)
+✓ Good README.md file
+✓ Explains approach and design decisions
+✓ Mentions DMRC website as data source
+✓ Discusses why list-of-lists was chosen over dictionary
+✓ Clear feature description
+
+ISSUES:
+- Doesn't mention hardcoded path issue
+- Lacks clear execution instructions
+Deduction: -2 marks
+
+6. BONUS FEATURES (0/15)
+✗ No additional metro lines
+✗ No fare calculation
+✗ No extra features
+
+========================================
+DETAILED ANALYSIS:
+
+STRENGTHS:
+1. Journey planner is sophisticated with BFS algorithm
+2. Handles interchange intelligently
+3. Good code structure and modularization
+4. Thoughtful README explaining design choices
+
+CRITICAL ISSUES:
+1. NO SCHEDULE LOGIC MODULE - Missing entire Phase 2 Part A
+2. Hardcoded Mac-specific absolute path makes code non-portable
+3. No menu system - all inputs must be provided upfront
+
+CODE REVIEW:
+The metro_simulator() function implements an excellent pathfinding algorithm:
+- Uses BFS-style exploration with visited tracking
+- Properly detects line changes
+- Calculates waiting times with peak hour awareness
+- Adds realistic 10-minute interchange delay
+
+However, the missing schedule timing module is a critical omission.
+
+RECOMMENDATION:
+Student shows strong understanding of graph algorithms and route planning. However, failed to implement the schedule timing module (Phase 2 Part A) which is a required core feature. Also needs to fix hardcoded path and add proper menu interface.

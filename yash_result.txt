@@ -1,0 +1,241 @@
+========================================
+DELHI METRO SIMULATOR - EVALUATION REPORT
+Student: Yash Yadav (2025573)
+Date: December 13, 2025
+========================================
+
+FINAL SCORES:
+- Data Collection: 18/20
+- Schedule Logic: 0/30
+- Journey Planner: 20/25
+- Code Quality: 12/15
+- Documentation: 8/10
+- Bonus: 7/15
+TOTAL: 65/115
+
+========================================
+
+1. DATA COLLECTION (18/20)
+✓ COMPREHENSIVE DATA
+✓ Blue Line complete
+✓ Magenta Line complete
+✓ Data format: Line, Station, Next Station, Time, Interchange
+✓ 6-line blocks for each entry (includes blank line separator)
+✓ Good data organization
+✓ Interchange points marked
+✓ Realistic travel times (1-5 minutes)
+
+PROFESSIONAL APPROACH:
++ Clean data structure
++ Proper interchange marking
++ Good coverage of both lines
+
+ISSUES:
+- Some minor formatting inconsistencies
+Deduction: -2 marks
+
+2. SCHEDULE LOGIC (0/30)
+✗ NOT IMPLEMENTED
+
+The program does NOT have a separate schedule timing module.
+Cannot query "when is next metro at station X" independently.
+
+All timing calculations are embedded within journey planner only.
+
+The code goes directly to journey planning with these inputs:
+- Current station
+- Final station
+- Time at the moment
+
+Required standalone schedule timing query is COMPLETELY MISSING.
+
+3. JOURNEY PLANNER (20/25)
+✓ WORKS WELL!
+
+NO MENU - Expects inputs upfront:
+```python
+begin = input("Enter the current station: ")
+end = input("Enter the final station: ")
+t0 = input("Time at the moment: ")
+```
+
+Test: Dwarka → Botanical Garden at 08:22
+Output:
+```
+|Same Line Journey|
+Route: Dwarka-->Dwarka Mor-->Nawada-->...-->Botanical Garden
+Total Time: 64.5 minutes
+Final Arrival Time: 9:26
+Fare for the trip in inr is: 70
+```
+
+EXCELLENT FEATURES:
+✓ Shows complete route with all stations listed
+✓ Calculates total travel time accurately
+✓ Shows final arrival time
+✓ INCLUDES FARE CALCULATION
+✓ Distinguishes between same-line and interchange journeys
+✓ Good route visualization
+
+CODE QUALITY:
++ ver_stn() function handles case-insensitive station names
++ Good error handling with ValueError checks
++ Time validation (24-hour format check)
++ Interchange detection logic
++ Helper functions: to_min(), to_strtime()
+
+ISSUES:
+- No menu system (all inputs upfront)
+- Couldn't test interchange fully
+- No subsequent metro times shown
+Deduction: -5 marks
+
+4. CODE QUALITY (12/15)
+Positives:
++ EXCELLENT ERROR HANDLING:
+  ```python
+  if ":" not in t0 or not t0.replace(":", "").isdigit():
+      raise ValueError("Please enter the time in HH:MM format.")
+  ```
++ Case-insensitive station matching
++ Time format validation
++ Good helper functions (to_min, to_strtime, ver_stn)
++ Clean variable names
++ Good comments explaining logic
++ 430 lines of well-organized code
+
+Negatives:
+- No menu system
+- All inputs expected upfront
+- Could be more modular
+Deduction: -3 marks
+
+5. DOCUMENTATION (8/10)
+✓ EXCELLENT: TWO README files!
+✓ README.md (main assignment)
+✓ README_BONUS.md (bonus features)
+
+Good documentation with clear separation of main and bonus features.
+
+ISSUES:
+- Could explain the no-menu approach
+- More execution examples would help
+Deduction: -2 marks
+
+6. BONUS FEATURES (7/15)
+✓ FARE CALCULATOR: Well implemented (7 marks)
+  - Shows fare in rupees
+  - Based on number of stations traveled
+  - DMRC-style pricing
+  - Integrated cleanly into journey output
+
+Example: "Fare for the trip in inr is: 70"
+
+✗ No additional metro lines
+
+Good fare implementation but limited to this one bonus feature.
+
+========================================
+DETAILED ANALYSIS:
+
+STRENGTHS:
+1. Journey planner works well with detailed output
+2. EXCELLENT error handling and input validation
+3. Case-insensitive station matching (user-friendly!)
+4. Time format validation
+5. Fare calculator integrated smoothly
+6. Shows complete route with all stations
+7. Two README files (main + bonus)
+8. Clean, readable code
+
+UNIQUE FEATURES:
+- Case-insensitive station name handling (very user-friendly!)
+- Comprehensive input validation
+- 24-hour format check
+- Detailed route display with --> arrows
+
+CRITICAL ISSUES:
+1. NO SCHEDULE TIMING MODULE (missing entire Phase 2 Part A)
+2. No menu system - expects all inputs upfront
+3. Cannot query metro timings independently
+
+CODE REVIEW:
+
+ERROR HANDLING (EXCELLENT):
+```python
+# Station validation
+begin = ver_stn(begin)
+end = ver_stn(end)
+if begin is None or end is None:
+    raise ValueError("Incorrect Station name entered.")
+
+# Time format validation
+if ":" not in t0 or not t0.replace(":", "").isdigit():
+    raise ValueError("Please enter the time in HH:MM format.")
+
+# Time range validation
+h, m = map(int, t0.split(":"))
+if h < 0 or h > 23 or m < 0 or m > 59:
+    raise ValueError("The time should be entered in 24hr format.")
+```
+
+This is EXCELLENT error handling! Shows maturity in coding practices.
+
+CASE-INSENSITIVE MATCHING:
+```python
+def ver_stn(name):
+    for x in stns:
+        if x.lower() == name.lower():
+            return x
+    return None
+```
+Very user-friendly! Users can type "rajiv chowk" or "Rajiv Chowk" - both work.
+
+JOURNEY OUTPUT:
+```
+|Same Line Journey|
+Route: Dwarka-->Dwarka Mor-->Nawada-->...
+Total Time: 64.5 minutes
+Final Arrival Time: 9:26
+Fare for the trip in inr is: 70
+```
+Clean, informative output with all key information.
+
+TIME HELPERS:
+```python
+def to_min(t):
+    h, m = map(int, t.split(":"))
+    return 60*h + m
+
+def to_strtime(total):
+    total = int(total)
+    h = total // 60
+    m = total % 60
+    return f"{h}:{m:02d}"
+```
+Clean utility functions.
+
+ROUTE BUILDING:
+The code builds routes intelligently:
+- t_same for same-line route time
+- t_inter for interchange route time
+- Compares both to find optimal route
+- Shows detailed station progression
+
+RECOMMENDATION:
+This is a GOOD SUBMISSION with excellent error handling and user-friendly features. The case-insensitive station matching and comprehensive input validation show professional coding practices.
+
+However, CRITICAL OMISSIONS:
+1. No schedule timing module (Phase 2 Part A completely missing)
+2. No menu system
+
+With these additions, this would be a top-tier submission. The error handling and validation are among the best in the class.
+
+Student clearly understands:
+- Input validation
+- Error handling
+- User experience
+- Route finding algorithms
+- Time calculations
+
+Just needs to implement the missing schedule module and add a menu interface.

@@ -1,0 +1,187 @@
+========================================
+DELHI METRO SIMULATOR - EVALUATION REPORT
+Student: Shlok (shlok25480@iiitd.ac.in)
+Date: December 13, 2025
+========================================
+
+FINAL SCORES:
+- Data Collection: 17/20
+- Schedule Logic: 0/30
+- Journey Planner: 23/25
+- Code Quality: 9/15
+- Documentation: 7/10
+- Bonus: 5/15
+TOTAL: 61/105
+
+========================================
+
+1. DATA COLLECTION (17/20)
+✓ Has metro_data.txt file
+✓ CSV format with multiple columns
+✓ Blue and Magenta lines present
+✓ Travel times included
+✓ Station names with interchange points
+
+ISSUES:
+- Initial hardcoded path: "C:/Users/ASUS/Downloads/metro_data.txt"
+  (Fixed for testing)
+- Data completeness not fully verified
+Deduction: -3 marks
+
+2. SCHEDULE LOGIC (0/30)
+✗ NOT IMPLEMENTED AS SEPARATE MODULE
+
+The code has next_metro_time() function that calculates when next metro arrives:
+```python
+def next_metro_time(l, st, cur):
+    # Calculates first train time at station
+    # Adds frequency (4 or 8 min) until current time reached
+```
+
+BUT this is only used internally by journey planner, not exposed as standalone feature.
+
+User cannot query "when is next metro at station X" independently.
+
+Required separate schedule timing module is MISSING.
+
+3. JOURNEY PLANNER (23/25)
+✓ WORKS WELL!
+
+The code runs journey_planner() directly (no menu, but functional).
+
+Expected prompts:
+- Source station
+- Destination station  
+- Current time (HH:MM)
+
+FEATURES:
+✓ Handles same-line journeys
+✓ Handles interchange journeys
+✓ Shows detailed journey plan:
+  - Next metro time
+  - Arrival at interchange
+  - Transfer details
+  - Next metro on second line
+  - Final arrival time
+  - Total travel time
+  - FARE CALCULATION
+
+Example output structure:
+```
+Start from [source] on [line1] Line
+Next metro at [time]
+Arrive at [interchange] at [time]
+Transfer to [line2] Line
+Next metro departs at [time]
+Arrive at [destination] at [time]
+Total travel time: X minutes
+Fare: ₹Y
+```
+
+✓ Proper time calculations
+✓ Adds 2-minute interchange delay
+✓ Shows subsequent metro times
+
+Minor issues:
+- No menu system (runs directly)
+- Limited error handling
+Deduction: -2 marks
+
+4. CODE QUALITY (9/15)
+Positives:
++ Modular functions (next_metro_time, tstr)
++ Clean helper function for time string conversion (tstr)
++ Peak hour detection logic correct
++ Good separation of concerns
+
+Negatives:
+- HARDCODED PATH initially
+- No menu system
+- Variable names could be clearer (G for data, l for line, st for station)
+- Limited comments
+- No input validation
+- Abrupt structure (goes directly to journey_planner())
+Deduction: -6 marks
+
+5. DOCUMENTATION (7/10)
+✓ Has TWO PDF README files:
+  - README (Bonus Component).pdf
+  - Readme File.pdf
+
+ISSUES:
+- PDF format not ideal (text preferred)
+- Couldn't fully review PDF contents
+- Doesn't mention hardcoded path issue
+Deduction: -3 marks
+
+6. BONUS FEATURES (5/15)
+✓ FARE CALCULATION: Implemented (5 marks)
+  - Shows fare in output: "Fare: ₹X"
+  - Calculated as: (s1 + s2) * 0.5
+  - Where s1, s2 are cumulative travel times
+  - Simple but functional
+
+✗ No additional metro lines
+✗ No other bonus features
+
+Partial credit: 5/15
+
+========================================
+DETAILED ANALYSIS:
+
+STRENGTHS:
+1. Journey planner works for both same-line and interchange
+2. Fare calculation implemented
+3. Shows detailed step-by-step journey
+4. Time calculations are accurate
+5. Handles peak vs off-peak hours correctly
+6. Clean helper functions
+
+CRITICAL ISSUES:
+1. No schedule timing module (missing Phase 2 Part A)
+2. Hardcoded absolute path (C:/Users/ASUS/Downloads/)
+3. No menu system - goes directly to journey planner
+4. Poor variable names (single letters)
+
+CODE REVIEW:
+
+NEXT METRO TIME FUNCTION:
+```python
+def next_metro_time(l, st, cur):
+    # Sums travel times to get first train time at station
+    s = 0
+    for x in sts:
+        if x[1] == st:
+            break
+        s = s + int(x[3])
+    
+    ft = 6*60 + s  # First train time
+    
+    # Find next train after current time
+    while nt < cur:
+        if (nt >= 480 and nt < 600) or (nt >= 1020 and nt < 1140):
+            nt = nt + 4
+        else:
+            nt = nt + 8
+```
+This is solid logic but not exposed to user as standalone feature.
+
+FARE CALCULATION:
+```python
+print("Fare: ₹", (s1 + s2) * 0.5)
+```
+Simple formula: distance × 0.5 rupees per minute
+Not accurate to DMRC pricing but functional.
+
+JOURNEY PLANNER STRUCTURE:
+The code directly calls journey_planner() at the end instead of having a menu system. This is poor UX design.
+
+RECOMMENDATION:
+Student understands journey planning well and implements it correctly. Fare calculation is a good addition. However:
+1. Needs to add schedule timing as separate module
+2. Must fix hardcoded path
+3. Should implement menu system
+4. Better variable naming needed
+5. More comments required
+
+The core logic is sound but presentation and structure need improvement.

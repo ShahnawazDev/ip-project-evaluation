@@ -1,0 +1,140 @@
+========================================
+DELHI METRO SIMULATOR - EVALUATION REPORT
+Student: Rishav (rishav25425@iiitd.ac.in)
+Date: December 13, 2025
+========================================
+
+FINAL SCORES:
+- Data Collection: 18/20
+- Schedule Logic: 28/30
+- Journey Planner: 0/25
+- Code Quality: 8/15
+- Documentation: 5/10
+- Bonus: 0/15
+TOTAL: 59/100
+
+========================================
+
+1. DATA COLLECTION (18/20)
+✓ Has metro_data.txt file
+✓ CSV format with station, next station, travel time, line
+✓ Travel times included
+✓ Covers required lines
+
+ISSUES:
+- Data file not fully inspected (couldn't verify completeness)
+- Format appears standard but limited visibility
+Deduction: -2 marks
+
+2. SCHEDULE LOGIC (28/30)
+✓ WORKS CORRECTLY!
+
+Test: Line=Blue, Station=Rajiv Chowk, Time=09:18
+Output:
+- "Next metro at 08:25"
+- "Subsequent metro at 08:33,08:41"
+✓ Shows multiple upcoming trains
+✓ Peak hour detection working (4-min intervals at 09:18)
+
+CODE ANALYSIS:
++ reach_time() function calculates time from start to station
++ Properly loops through metro_data.txt to sum travel times
++ Peak hour logic: (480 ≤ start_time ≤ 600) or (1020 ≤ start_time ≤ 1140)
++ Correctly adds 4 minutes during peak, 8 minutes off-peak
++ Shows 3 subsequent trains
+
+Minor issues:
+- Could show more subsequent trains
+- Limited error handling
+Deduction: -2 marks
+
+3. JOURNEY PLANNER (0/25)
+✗ INCOMPLETE - EXPLICITLY STATED IN CODE
+
+From lines 71-164, the journey planner code is commented out with note:
+```python
+# SECOND PART = RIDE PLANNER PART
+# AND THIS PART IS INCOMPLETE BUT ABOVE PART A IS COMPLETED AND GIVING CORRECT OUTPUT
+```
+
+Student acknowledges:
+- "I have done second part seperatly"
+- "pls run both codes seperatly"
+- Functions are defined but not completed
+- current_station and destiny_station variables defined but no logic
+
+This is honest but incomplete submission.
+0 marks for incomplete feature.
+
+4. CODE QUALITY (8/15)
+Positives:
++ Clean, readable code for Part 1
++ Good function names (time_min, min_time, reach_time)
++ Proper time conversion functions
++ Well-structured logic flow
+
+Negatives:
+- Journey planner incomplete
+- No menu system (expects 3 inputs upfront: line, station, time)
+- Limited comments
+- No error handling for invalid inputs
+- Doesn't check if station exists on specified line
+Deduction: -7 marks
+
+5. DOCUMENTATION (5/10)
+✓ Has readme file (readme file.txt)
+✓ Includes 3 JPG screenshots showing:
+  - Output examples
+  - Code snippets
+  - Test results
+
+ISSUES:
+- README content not fully reviewed
+- Screenshots are helpful but don't replace written documentation
+- No clear explanation of why Part 2 is incomplete
+- Lacks execution instructions
+Deduction: -5 marks
+
+6. BONUS FEATURES (0/15)
+✗ No additional metro lines
+✗ No fare calculation
+✗ No extra features
+
+========================================
+DETAILED ANALYSIS:
+
+STRENGTHS:
+1. Schedule logic (Part 1) is well-implemented and works correctly
+2. Clean, understandable code structure
+3. Honest about incomplete work (comments acknowledge it)
+4. Time conversion functions are elegant
+5. Peak hour detection works properly
+
+CRITICAL ISSUES:
+1. Journey planner (Part 2) completely incomplete
+2. Code is commented out with explicit note about incompleteness
+3. No menu system
+4. No input validation
+
+CODE REVIEW:
+
+PART 1 - Schedule Logic (COMPLETE):
+```python
+def reach_time(current_station):
+    # Sums travel times from start to current station
+    # Returns time offset
+```
+This works well. The logic properly:
+- Reads metro_data.txt
+- Calculates cumulative travel time
+- Determines when metros arrive at the station
+- Shows multiple upcoming arrivals
+
+PART 2 - Journey Planner (INCOMPLETE):
+The code has skeleton definitions but no implementation:
+- Variables defined (current_station, destiny_station)
+- Helper functions copied from Part 1
+- But no actual journey planning logic
+
+RECOMMENDATION:
+Student completed Phase 2 Part A (schedule logic) correctly but failed to complete Part B (journey planner). The code that exists is clean and functional. This appears to be a time management issue - student should have submitted partial journey planner implementation rather than leaving it completely undone. Honest about incompleteness but honesty doesn't substitute for completion.

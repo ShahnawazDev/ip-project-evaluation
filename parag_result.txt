@@ -1,0 +1,98 @@
+========================================
+DELHI METRO SIMULATOR - EVALUATION REPORT
+Student: Parag Prasun (2025354)
+Date: December 13, 2025
+========================================
+
+FINAL SCORES:
+- Data Collection: 17/20
+- Schedule Logic: 30/30
+- Journey Planner: 0/25
+- Code Quality: 8/15
+- Documentation: 7/10
+- Bonus: 0/15
+TOTAL: 62/100
+
+========================================
+
+1. DATA COLLECTION (17/20)
+✓ Blue Line data present
+✓ Magenta Line data present
+✓ CSV-style format with line names as section headers
+✓ Travel times included
+✓ Interchange points marked
+ISSUES:
+- Incomplete data (only 245 lines, truncated)
+- Some Blue line segments (Blue1-Blue5) have inconsistent naming
+- Missing complete station list for full network
+Deduction: -3 marks
+
+2. SCHEDULE LOGIC (30/30)
+✓ WORKS PERFECTLY
+Test: Blue Line, Rajiv Chowk, 09:18
+Output: "Next metro at: 09:18, Subsequent metros at 09:22,09:26,09:30,09:34..."
+✓ Correct peak hour detection (4 min intervals at 09:18)
+✓ Recursive functions handle different time periods correctly
+✓ Handles edge cases (service end times)
+✓ Multiple subsequent train times shown
+EXCELLENT IMPLEMENTATION
+
+3. JOURNEY PLANNER (0/25)
+✗ CRITICAL BUG - DOES NOT PRINT OUTPUT
+The q2() function calculates the journey and returns values, but main menu never prints the returned value.
+Code issue at line ~520:
+```python
+elif op==2:
+    q2()  # <-- Returns value but doesn't print it!
+    print()
+```
+Should be: print(q2())
+
+Testing showed function calculates correctly internally but user sees no output.
+This is a CRITICAL failure of core functionality.
+
+4. CODE QUALITY (8/15)
+Positives:
++ Modular function design
++ Good variable naming in some areas
+Negatives:
+- Inconsistent code style
+- Many redundant recursive functions (case1, case2peak, case3, case4peak, case5)
+- Could use loops instead of 5 separate functions
+- The q2() function is overly complex (150+ lines)
+- Limited comments
+- Output bug shows lack of testing
+
+5. DOCUMENTATION (7/10)
+✓ Has README files (PDF format)
+✓ Explains approach and data structure
+ISSUES:
+- PDF format not ideal (plain text preferred)
+- Doesn't mention the critical output bug
+- Lacks execution instructions
+Deduction: -3 marks
+
+6. BONUS FEATURES (0/15)
+✗ No additional metro lines
+✗ No fare calculation
+✗ No extra features implemented
+
+========================================
+DETAILED ANALYSIS:
+
+STRENGTHS:
+1. Schedule logic is excellently implemented
+2. Peak/off-peak hour detection works perfectly
+3. Shows multiple subsequent metro times
+4. Clean recursive approach for time calculations
+
+CRITICAL ISSUES:
+1. Journey planner output bug makes it completely non-functional for users
+2. Despite having working logic, the failure to print results is unacceptable
+3. This appears to be a simple oversight but renders the feature useless
+
+CODE REVIEW:
+The ride_plan() function inside q2() does all calculations correctly but returns a value that's never printed. This single-line bug costs 25 marks.
+
+RECOMMENDATION:
+Student clearly understands the problem and has working logic, but failed to properly integrate and test the complete system. The output bug is a critical oversight.
