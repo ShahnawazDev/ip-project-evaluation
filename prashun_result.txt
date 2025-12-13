@@ -6,12 +6,13 @@ Date: December 13, 2025
 
 FINAL SCORES:
 - Data Collection: 17/20
-- Schedule Logic: 0/30
+- Schedule Logic: 15/30
 - Journey Planner: 22/25
 - Code Quality: 10/15
 - Documentation: 10/10
-- Bonus: 0/15
-TOTAL: 59/100
+- Bonus: 0/20
+REGULAR TOTAL: 74/100
+TOTAL: 74/120
 
 ========================================
 
@@ -28,18 +29,51 @@ ISSUES:
 - Screenshot included but not needed
 Deduction: -3 marks
 
-2. SCHEDULE LOGIC (0/30)
-✗ NOT IMPLEMENTED
-The code only implements journey planning, not a separate schedule timing module.
-User cannot check "when is next metro at station X" independently.
-All timing calculations are embedded within journey planner only.
+2. SCHEDULE LOGIC (15/30)
+✓ IMPLEMENTED AND DISPLAYS OUTPUT (but not as standalone module)
 
-Required functionality missing:
-- No standalone schedule timing query
-- No "next metro at station" feature
-- No subsequent metro times display
+COMPLETE IMPLEMENTATION:
+✓ check_gap() function (lines 41-49):
+  - Converts 12-hour to 24-hour format for calculations
+  - Correct peak hours: 8-10 AM & 5-7 PM → 4 minutes
+  - Normal hours: all other times → 8 minutes
+  ```python
+  if (8 <= h24 < 10) or (17 <= h24 < 19):
+      return 4
+  else:
+      return 8
+  ```
 
-This is a CRITICAL OMISSION of core requirement.
+✓ add_minutes() function (lines 51-58):
+  - Handles time arithmetic correctly
+  - Proper hour/minute overflow handling
+
+✓ DISPLAYS TO USER:
+  Line 175: `print(f"Next metro at {current_hour:02d}:{current_minute:02d}")`
+  Line 210: `print(f"Next {n_line} metro departs at {current_hour:02d}:{current_minute:02d}")`
+  
+  Calculates waiting time based on current time modulo frequency:
+  ```python
+  gap = check_gap(current_hour, am_pm)
+  rem = current_minute % gap
+  wait = 0
+  if rem != 0:
+      wait = gap - rem
+  current_hour, current_minute = add_minutes(current_hour, current_minute, wait)
+  print(f"Next metro at {current_hour:02d}:{current_minute:02d}")
+  ```
+
+✗ NOT A STANDALONE MODULE:
+  - Schedule timing embedded within journey planner
+  - No menu option for "check metro timings"
+  - Cannot query schedule independently
+  - Does not show multiple subsequent metro times
+
+AWARDED 15/30: Complete schedule logic with correct peak/off-peak handling
+AND displays next metro time to user, but not accessible as standalone feature.
+
+This is consistent with Rahul (20/30), Sadaanant (20/30), Veer (20/30), 
+Shlok (20/30), and Vivaswat (20/30) who have similar implementations.
 
 3. JOURNEY PLANNER (22/25)
 ✓ WORKS WELL!
@@ -113,10 +147,13 @@ STRENGTHS:
 2. Handles interchange intelligently
 3. Good code structure and modularization
 4. Thoughtful README explaining design choices
+5. **SCHEDULE LOGIC IMPLEMENTED**: Shows next metro time with correct peak/off-peak frequency
+6. Proper waiting time calculation based on current time modulo frequency
+7. Displays next metro at interchanges
 
 CRITICAL ISSUES:
-1. NO SCHEDULE LOGIC MODULE - Missing entire Phase 2 Part A
-2. Hardcoded Mac-specific absolute path makes code non-portable
+1. Schedule logic not exposed as STANDALONE MODULE (lacks menu option for independent query)
+2. Hardcoded Mac-specific absolute path makes code non-portable (fixed for testing)
 3. No menu system - all inputs must be provided upfront
 
 CODE REVIEW:
@@ -129,4 +166,8 @@ The metro_simulator() function implements an excellent pathfinding algorithm:
 However, the missing schedule timing module is a critical omission.
 
 RECOMMENDATION:
-Student shows strong understanding of graph algorithms and route planning. However, failed to implement the schedule timing module (Phase 2 Part A) which is a required core feature. Also needs to fix hardcoded path and add proper menu interface.
+Student shows strong understanding of graph algorithms, route planning, and schedule timing logic. The check_gap() function correctly implements peak/off-peak frequencies and displays next metro times to users. However, this functionality is embedded within the journey planner rather than exposed as a standalone module. Also needs to fix hardcoded path and add proper menu interface.
+
+CORRECTED EVALUATION:
+- Schedule Logic: 0→15 (+15 marks) for implemented logic that displays to user
+- Total: 59→74 (+15 marks)

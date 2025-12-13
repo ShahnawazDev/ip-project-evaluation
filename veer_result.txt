@@ -6,13 +6,13 @@ Date: December 13, 2025 (REEVALUATED)
 
 FINAL SCORES:
 - Data Collection: 20/20
-- Schedule Logic: 0/30
+- Schedule Logic: 15/30
 - Journey Planner: 23/25
 - Code Quality: 9/15
 - Documentation: 10/10
-- Bonus: 0/15
-REGULAR TOTAL: 62/100
-TOTAL: 62/100
+- Bonus: 0/20
+REGULAR TOTAL: 77/100
+TOTAL: 77/120
 
 ========================================
 
@@ -30,15 +30,41 @@ TOTAL: 62/100
 EXCELLENT DATA COLLECTION - Complete and accurate.
 No deduction.
 
-2. SCHEDULE LOGIC (0/30)
-✗ NOT IMPLEMENTED
+2. SCHEDULE LOGIC (15/30)
+✓ IMPLEMENTED AND DISPLAYS OUTPUT (but not as standalone module)
 
-The program has NO schedule timing module.
-Cannot query "when is next metro at station X" independently.
+COMPLETE IMPLEMENTATION:
+✓ frequency() function (lines 16-19):
+  - Correct peak hours: 8-10 AM & 5-7 PM → 4 minutes
+  - Normal hours: all other times → 8 minutes
+  - Service hours: 6 AM - 11 PM validated
 
-The code goes directly to journey planning without offering a schedule timing option.
+✓ next_metro_timing() function (lines 29-34):
+  - Calculates next metro based on current time and frequency
+  - Uses modulo arithmetic for correct timing
 
-Required functionality completely missing.
+✓ hourconverter() function (lines 36-39):
+  - Converts minutes to HH:MM format for display
+
+✓ DISPLAYS TO USER (lines 76, 202, 280):
+  ```python
+  print(f"Next metro at {hourconverter(next_metro_time)}")
+  for i in range(1,3):
+      metro_time = next_metro_time + (i * freq)
+      print(f"Next to next metro {i}: {hourconverter(metro_time)}")
+  ```
+  - Shows next metro time
+  - Shows 3 subsequent metro times
+
+✗ NOT A STANDALONE MODULE:
+  - Schedule timing embedded within journey planner
+  - No menu option for "check metro timings"
+  - Cannot query schedule independently
+
+AWARDED 15/30: Complete schedule logic with correct peak/off-peak handling
+AND displays output to user, but not accessible as standalone feature.
+
+This is consistent with Rahul (20/30) and Sadaanant (20/30) who have similar implementations.
 
 3. JOURNEY PLANNER (23/25)
 ✓ WORKS EXCELLENTLY FOR SAME-LINE, SINGLE-INTERCHANGE, AND DOUBLE-INTERCHANGE!
@@ -121,19 +147,20 @@ STRENGTHS:
 1. EXCELLENT data collection: 80 complete stations across 3 line variants
 2. COMPREHENSIVE journey planner with same-line, single-interchange, AND double-interchange support
 3. Sophisticated route optimization (compares multiple paths, selects optimal)
-4. Shows next 3 metro times at source station
-5. Detailed interchange information (walking times, next metro times)
-6. COMPREHENSIVE README with all required information
-7. Professional time calculations and formatting
-8. Handles bidirectional travel correctly
-9. Proper peak/off-peak frequency logic
+4. **SCHEDULE LOGIC IMPLEMENTED**: Shows next metro time + 3 subsequent times at source station
+5. Correct peak/off-peak frequency logic (4 min vs 8 min)
+6. Detailed interchange information (walking times, next metro times at interchanges)
+7. COMPREHENSIVE README with all required information
+8. Professional time calculations and formatting
+9. Handles bidirectional travel correctly
+10. Service hours validation (6 AM - 11 PM)
 
 CRITICAL ISSUES:
-1. NO schedule timing module (missing entire Phase 2 Part A requirement) - MAJOR DEDUCTION
+1. Schedule logic not exposed as STANDALONE MODULE (lacks menu option for independent query) - PARTIAL DEDUCTION
 2. No menu system - expects all inputs upfront
-3. Hardcoded file path (line 41: "C:/Users/Veer Pratap/OneDrive/Documents/metro_data.txt")
-4. No input validation or error handling
-5. Crashes with ValueError if time format is wrong (line 5)
+3. Hardcoded file path (line 44: "C:/Users/Veer Pratap/OneDrive/Documents/metro_data.txt")
+4. Limited input validation and error handling
+5. Crashes with IndexError if time format is wrong (lines 3-5)
 6. No try/except blocks
 
 CODE REVIEW:
@@ -167,21 +194,22 @@ But this feature alone doesn't make up for:
 - Poor error handling
 
 RECOMMENDATION:
-The student demonstrates STRONG understanding of journey planning with sophisticated routing logic that handles complex multi-interchange scenarios. The data collection is complete and accurate. The documentation is comprehensive and meets all requirements.
+The student demonstrates STRONG understanding of both schedule logic AND journey planning with sophisticated routing logic that handles complex multi-interchange scenarios. The data collection is complete and accurate. The documentation is comprehensive and meets all requirements.
 
-HOWEVER, the missing schedule timing module (Phase 2 Part A) is a critical gap that costs 30 marks. This is the ONLY reason for the low score.
+SCHEDULE LOGIC IS IMPLEMENTED with correct peak/off-peak frequencies and DISPLAYS output to users, but lacks standalone module structure (no menu option). This is similar to Rahul and Sadaanant's implementations.
 
-If schedule timing module were added, this would score 92/100:
-- With menu system: could reach 95+/100
-- With input validation: could reach full marks
+If schedule timing were exposed as a standalone module with menu:
+- Would score 92/100
+- With input validation: could reach 95+/100
 
-The journey planner implementation is actually MORE sophisticated than many other submissions (handles double-interchange optimally), and the README is excellent.
+The journey planner implementation is MORE sophisticated than many submissions (handles double-interchange optimally), schedule logic works correctly, and the README is excellent.
 
 CORRECTED SCORES:
 - Data Collection: 17→20 (+3 marks for verified complete data)
+- Schedule Logic: 0→15 (+15 marks for implemented logic that displays to user)
 - Journey Planner: 21→23 (+2 marks for double-interchange capability)
 - Documentation: 6→10 (+4 marks per grading guidelines)
-TOTAL CHANGE: 53→62 (+9 marks)
+TOTAL CHANGE: 53→77 (+24 marks)
 
 CODE IMPROVEMENT NEEDED:
 ```python

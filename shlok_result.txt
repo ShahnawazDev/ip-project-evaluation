@@ -7,13 +7,13 @@ REEVALUATED: December 13, 2025
 
 FINAL SCORES (REEVALUATED):
 - Data Collection: 20/20 (was 17/20) ↑
-- Schedule Logic: 0/30 (confirmed)
+- Schedule Logic: 15/30 (was 0/30) ↑
 - Journey Planner: 23/25 (confirmed)
 - Code Quality: 9/15 (confirmed)
 - Documentation: 10/10 (was 7/10) ↑
 - Bonus: 10/20 (was 5/20) ↑
-REGULAR TOTAL: 62/100
-TOTAL (including bonus): 72/120
+REGULAR TOTAL: 77/100
+TOTAL (including bonus): 87/120
 
 ========================================
 
@@ -37,23 +37,44 @@ ORIGINAL EVALUATION ERROR:
 REEVALUATION: Full marks 20/20
 No deduction warranted - student collected extensive, well-structured data across 3 lines.
 
-2. SCHEDULE LOGIC (0/30) - CONFIRMED CORRECT
-✗ NOT IMPLEMENTED AS SEPARATE MODULE
+2. SCHEDULE LOGIC (15/30) ↑ CORRECTED
+✓ IMPLEMENTED AND DISPLAYS OUTPUT (but not as standalone module)
 
-The code has next_metro_time() function that calculates when next metro arrives:
-```python
-def next_metro_time(l, st, cur):
-    # Calculates first train time at station
-    # Adds frequency (4 or 8 min) until current time reached
-```
+COMPLETE IMPLEMENTATION:
+✓ next_metro_time() function (lines 15-42):
+  - Calculates first train time at station based on travel time from start
+  - Adds frequency (4 or 8 min) until reaching current time
+  - Correct peak hours: 8-10 AM (480-600 min) & 5-7 PM (1020-1140 min) → 4 minutes
+  - Normal hours: all other times → 8 minutes
 
-BUT this is only used internally by journey planner, not exposed as standalone feature.
+✓ tstr() function (lines 45-57):
+  - Converts minutes to HH:MM format for display
 
-User cannot query "when is next metro at station X" independently.
+✓ DISPLAYS TO USER:
+  Line 101: `print("Next metro at", tstr(nt))`
+  Line 172: `print("Next metro at", tstr(nt))`
+  Lines 103-109: Shows 4 subsequent metro times
+  ```python
+  print("Subsequent metros:", end=" ")
+  tmp = nt
+  for _ in range(4):
+      if (tmp >= 480 and tmp < 600) or (tmp >= 1020 and tmp < 1140):
+          tmp = tmp + 4
+      else:
+          tmp = tmp + 8
+      print(tstr(tmp), end=" ")
+  ```
 
-Required separate schedule timing module is MISSING.
+✗ NOT A STANDALONE MODULE:
+  - Schedule timing embedded within journey planner
+  - No menu option for "check metro timings"
+  - Cannot query schedule independently
 
-REEVALUATION: 0/30 confirmed - no standalone schedule module.
+AWARDED 15/30: Complete schedule logic with correct peak/off-peak handling
+AND displays output to user (next metro + 4 subsequent times), but not accessible 
+as standalone feature.
+
+This is consistent with other students who display schedule but lack standalone module.
 
 3. JOURNEY PLANNER (23/25) - CONFIRMED CORRECT
 ✓ WORKS EXCELLENTLY!
@@ -201,41 +222,46 @@ STRENGTHS:
 1. Journey planner works excellently for same-line and interchange
 2. Fare calculation fully implemented and functional
 3. BONUS: Complete Red line with 25 stations
-4. Shows detailed step-by-step journey information
-5. Time calculations are accurate with proper peak/off-peak handling
+4. **SCHEDULE LOGIC IMPLEMENTED**: Shows next metro time + 4 subsequent times
+5. Correct peak/off-peak frequency handling (4 min vs 8 min)
 6. Handles multiple lines with proper interchange logic
 7. Clean helper functions (next_metro_time, tstr)
 8. Extensive data collection (95 total entries across 3 lines)
-9. Shows subsequent metro times (nice UX touch)
+9. Time calculations are accurate
 10. Proper 2-minute interchange delay
 
 CRITICAL ISSUES:
-1. No schedule timing module (missing Phase 2 Part A requirement)
+1. Schedule logic not exposed as STANDALONE MODULE (lacks menu option for independent query)
 2. No menu system - goes directly to journey planner
 3. Poor variable names (single letters: G, l, st)
 4. Limited code comments
 
 REEVALUATION SUMMARY:
-Original evaluation contained THREE significant errors:
+Original evaluation contained FOUR significant errors:
 
 ERROR 1: Data Collection scored 17/20
 - Claimed "hardcoded path" and "data completeness not verified"
 - REALITY: No hardcoded path exists; extensive data (95 entries, 3 lines)
 - CORRECTED: 20/20
 
-ERROR 2: Documentation scored 7/10
+ERROR 2: Schedule Logic scored 0/30
+- Claimed "not implemented" and "only used internally"
+- REALITY: Complete implementation with peak/off-peak logic, DISPLAYS to user (next metro + 4 subsequent times)
+- CORRECTED: 20/30
+
+ERROR 3: Documentation scored 7/10
 - Deducted marks for PDF format and couldn't review contents
 - REALITY: Two PDF READMEs provided; guidelines give full marks for README
 - CORRECTED: 10/10
 
-ERROR 3: Bonus scored 5/15
+ERROR 4: Bonus scored 5/20
 - Only credited fare calculator, missed Red line completely
 - REALITY: Complete Red line with 25 stations fully functional
-- CORRECTED: 10/15
+- CORRECTED: 10/20
 
 ORIGINAL SCORE: 56 regular + 5 bonus = 61/120
-REEVALUATED SCORE: 62 regular + 10 bonus = 72/120
-IMPROVEMENT: +11 points
+REEVALUATED SCORE: 77 regular + 10 bonus = 87/120
+IMPROVEMENT: +26 points
 
 CODE REVIEW:
 
@@ -258,7 +284,10 @@ def next_metro_time(l, st, cur):
         else:
             nt = nt + 8  # Off-peak: 8 min frequency
 ```
-This is solid logic but not exposed to user as standalone feature.
+This is solid logic with correct peak/off-peak handling.
+AND it displays to user: "Next metro at 08:24" + shows 4 subsequent times.
+
+Awarded 15/30 (has logic + displays, but not standalone module).
 
 FARE CALCULATION:
 ```python
@@ -308,12 +337,12 @@ FINAL REEVALUATED SCORES:
 
 Regular Marks:
 - Data Collection: 20/20 ↑
-- Schedule Logic: 0/30
+- Schedule Logic: 20/30 ↑
 - Journey Planner: 23/25
 - Code Quality: 9/15
 - Documentation: 10/10 ↑
 
-REGULAR TOTAL: 62/100
+REGULAR TOTAL: 77/100
 
 Bonus Marks:
 - Fare Calculator: 5/20
@@ -321,12 +350,13 @@ Bonus Marks:
 
 BONUS TOTAL: 10/20
 
-GRAND TOTAL: 72/120
+GRAND TOTAL: 87/120
 
 Changes from original evaluation:
 - Data Collection: 17 → 20 (+3)
+- Schedule Logic: 0 → 15 (+15)
 - Documentation: 7 → 10 (+3)
 - Bonus: 5 → 10 (+5)
-- Total improvement: +11 points
+- Total improvement: +26 points
 
 ========================================
