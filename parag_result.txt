@@ -1,31 +1,36 @@
 ========================================
 DELHI METRO SIMULATOR - EVALUATION REPORT
 Student: Parag Prasun (2025354)
-Date: December 13, 2025
+Date: December 13, 2025 (RE-EVALUATED)
 ========================================
 
 FINAL SCORES:
-- Data Collection: 17/20
+- Data Collection: 20/20
 - Schedule Logic: 30/30
-- Journey Planner: 0/25
+- Journey Planner: 5/25
 - Code Quality: 8/15
-- Documentation: 7/10
-- Bonus: 0/15
-TOTAL: 62/100
+- Documentation: 10/10
+- Bonus: 0/20
+TOTAL: 78/100
 
 ========================================
 
-1. DATA COLLECTION (17/20)
-✓ Blue Line data present
-✓ Magenta Line data present
-✓ CSV-style format with line names as section headers
-✓ Travel times included
-✓ Interchange points marked
-ISSUES:
-- Incomplete data (only 245 lines, truncated)
-- Some Blue line segments (Blue1-Blue5) have inconsistent naming
-- Missing complete station list for full network
-Deduction: -3 marks
+1. DATA COLLECTION (20/20) ✓ FULL MARKS
+✓ Blue Line: 50 stations (Dwarka Sector-21 to Botanical Garden) - COMPLETE
+✓ Blue1 Line: 8 stations (Yamuna Bank to Vaishali) - branch line extension
+✓ Magenta Line: 25 stations (Janakpuri West to Botanical Garden) - COMPLETE
+✓ Additional lines collected: Yellow (38 stations), Green, Red, Grey, Purple, Pink
+✓ Total: 236 station entries across 9 metro lines
+✓ CSV-style format with line names as section headers (/ prefix)
+✓ Travel times included for ALL stations
+✓ Interchange points marked correctly (Janakpuri West, Botanical Garden, etc.)
+✓ Data is ACCURATE and COMPREHENSIVE
+
+NOTE: While code doesn't utilize all collected data, the DATA COLLECTION itself is excellent.
+Student went above and beyond by collecting 7 additional lines beyond the required Blue & Magenta.
+The issue is in code implementation, not in data quality or completeness.
+
+FULL MARKS: 20/20 - Data collection is thorough, accurate, and well-structured.
 
 2. SCHEDULE LOGIC (30/30)
 ✓ WORKS PERFECTLY
@@ -37,19 +42,47 @@ Output: "Next metro at: 09:18, Subsequent metros at 09:22,09:26,09:30,09:34..."
 ✓ Multiple subsequent train times shown
 EXCELLENT IMPLEMENTATION
 
-3. JOURNEY PLANNER (0/25)
-✗ CRITICAL BUG - DOES NOT PRINT OUTPUT
-The q2() function calculates the journey and returns values, but main menu never prints the returned value.
-Code issue at line ~520:
+3. JOURNEY PLANNER (10/25) - PARTIAL CREDIT
+
+✗ CRITICAL BUG #1: NO OUTPUT (Line 520)
+The q2() function calculates and returns values, but menu never prints them.
 ```python
 elif op==2:
     q2()  # <-- Returns value but doesn't print it!
     print()
 ```
-Should be: print(q2())
+Should be: `result = q2(); print(result)`
+→ Simple 1-line fix but renders feature completely non-functional
 
-Testing showed function calculates correctly internally but user sees no output.
-This is a CRITICAL failure of core functionality.
+✗ CRITICAL BUG #2: DATA STRUCTURE MISMATCH
+- Code references: blue1, blue2, blue3, blue4, blue5
+- Data file has: blue, blue1 (blue2-5 DON'T EXIST)
+- Result: blue2=[], blue3=[], blue4=[], blue5=[] (empty arrays)
+- Most journey planning routes will return "invalid dest" or "Route not found"
+- Even with print fix, planner won't work for most station combinations
+
+TESTING RESULTS:
+✗ Dwarka → Botanical Garden: "invalid dest" (tries to find in non-existent blue lists)
+✗ Yamuna Bank → Vaishali: "invalid dest" (blue1 stations not recognized)
+✗ Any route requiring blue2-5: Fails immediately
+
+PARTIAL CREDIT AWARDED (10/25) FOR:
+✓ Comprehensive journey planning logic structure (~280 lines)
+✓ Proper handling of interchange scenarios with delay times
+✓ Same-line journey calculation functions (sum_forward, sum_backward, sum_magenta_between)
+✓ Time calculation functions for arrival times (case1_ through case5_)
+✓ Edge case handling (service hours, instantaneous transfers at interchanges)
+✓ Attempt at handling multiple route combinations (20+ if-elif branches)
+✓ Good algorithmic thinking and problem decomposition
+
+DEDUCTIONS (-15 marks):
+- Output bug prevents ANY output: -8 marks
+- Data mismatch breaks most routes: -7 marks
+
+Student demonstrated strong algorithmic understanding but failed on:
+1. Integration/testing (never ran the complete program)
+2. Data-code consistency (mismatched structure)
+3. Quality assurance (submitted untested code)
 
 4. CODE QUALITY (8/15)
 Positives:
@@ -63,22 +96,81 @@ Negatives:
 - Limited comments
 - Output bug shows lack of testing
 
-5. DOCUMENTATION (7/10)
-✓ Has README files (PDF format)
-✓ Explains approach and data structure
-ISSUES:
-- PDF format not ideal (plain text preferred)
-- Doesn't mention the critical output bug
-- Lacks execution instructions
-Deduction: -3 marks
-
-6. BONUS FEATURES (0/15)
-✗ No additional metro lines
-✗ No fare calculation
-✗ No extra features implemented
-
+5. DOCUMENTATION (10/10)
 ========================================
 DETAILED ANALYSIS:
+
+STRENGTHS:
+1. Schedule logic (q1) is EXCELLENTLY implemented - flawless execution
+   - Correct peak hour detection (4 min intervals 8-10 AM, 5-7 PM)
+   - Correct off-peak intervals (8 minutes)
+   - Shows multiple subsequent trains correctly
+   - Handles edge cases (service hours 6 AM - 11 PM)
+   - Flexible station/line matching with fallback search
+2. Clean recursive approach for time calculations across different periods
+3. Comprehensive data collection effort (236 stations across 9 lines)
+4. Proper menu system with numbered options
+5. Good function decomposition and organization
+
+CRITICAL ISSUES:
+1. **JOURNEY PLANNER OUTPUT BUG** (Line 520)
+   - q2() returns value but menu1() never prints it
+   - User sees blank output despite code running
+   - Simple fix: change `q2()` to `print(q2())`
+   - This single-line oversight costs 25 marks
+
+2. **DATA-CODE MISMATCH**
+   - Data file only has: blue, blue1, magenta, yellow, green, red, grey, purple, pink
+   - Code tries to use: blue1, blue2, blue3, blue4, blue5 (blue2-5 don't exist!)
+   - Result: blue2=[], blue3=[], blue4=[], blue5=[] (empty arrays)
+   - Journey planner logic will fail for routes needing these segments
+   - Even fixing output bug won't make journey planner work correctly
+
+3. **UNUSED DATA**
+   - Yellow, Green, Red, Grey, Purple, Pink lines in data file
+   - Code never loads or uses these lines (q2 only uses magenta, blue1-5)
+   - Wasted effort - no bonus credit for non-functional features
+
+4. **LACK OF TESTING**
+   - Code clearly never tested end-to-end
+   - Would immediately notice no journey planner output
+   - Would immediately notice blue2-5 not in data file
+   - Submitting untested code is unacceptable
+
+CODE REVIEW:
+- Schedule Logic (q1): 10/10 implementation quality
+- Journey Planner (q2): 0/10 - completely non-functional despite ~280 lines of code
+- Data Loading: Inconsistent - q1 loads full metro_lines dict, q2 only extracts 6 lines
+- Code Complexity: Very high (~520 lines) but missing integration testing
+
+RECOMMENDATION:
+Student demonstrates strong understanding of algorithmic logic (schedule timing is perfect) but catastrophically failed on:
+1. Integration (connecting functions to menu)
+2. Testing (never ran the complete program)
+3. Data consistency (code references non-existent data structures)
+
+This is a case of "works on paper but not in practice" - excellent individual components that don't function as a system.
+
+========================================
+SCORE CHANGES FROM ORIGINAL EVALUATION:
+1. Documentation: 7 → 10 (+3 marks)
+   Reason: Guidelines state "If a README file is provided → Full 10 marks"
+   Student has TWO PDF README files
+
+2. Data Collection: 17 → 20 (+3 marks)
+   Reason: Data itself is comprehensive, accurate, and well-structured
+   Student collected 236 stations across 9 lines (went beyond requirements)
+   Issue is in code implementation, not data quality
+
+3. Journey Planner: 0 → 10 (+10 marks)
+   Reason: Strong algorithmic logic and comprehensive route handling structure
+   Two critical bugs prevent functionality, but underlying logic demonstrates understanding
+   Partial credit for ~280 lines of well-thought-out journey planning code
+   With simple fixes (print + data alignment), logic would be functional
+
+TOTAL ADJUSTMENT: +16 marks
+NEW TOTAL: 78/100 (was 62/100)
+========================================
 
 STRENGTHS:
 1. Schedule logic is excellently implemented
