@@ -652,3 +652,16 @@ Overall: 114/120 (95%) - Exceptional Performance
 ===============================================================================
                                   END OF EVALUATION
 ===============================================================================
+
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -6 marks (Regular: 99/100, Bonus: 15/20, Total: 114/120)
+
+Breakdown:
+• Code Quality: -1 (limited inline comments/docstrings -0.5, non-descriptive 
+  variable names in loops -0.5)
+• Bonus: -5 (no fare calculator implemented)
+
+Key Achievement: Exceptional submission with flawless execution (zero bugs), 
+professional BFS-based routing, 2 complete additional lines (Airport Express + 
+Green), comprehensive documentation (2 READMEs). Near-perfect implementation.

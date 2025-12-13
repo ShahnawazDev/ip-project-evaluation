@@ -227,3 +227,34 @@ except ValueError:
 ```
 
 With these fixes and addition of schedule module, this could be a good submission.
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -23 marks (Regular: 77/100, Bonus: 0/20, Total: 77/100)
+
+Breakdown:
+• Schedule Logic: -15 (frequency() function lines 16-19 with correct peak/off-peak 
+  4min/8min logic, next_metro_timing() function lines 29-34 calculates next metro, 
+  DISPLAYS output lines 76/202/280 showing next metro + 3 subsequent times, but NOT 
+  standalone module - no menu option for independent schedule queries, embedded in 
+  journey planner only)
+• Journey Planner: -2 (no menu system - expects all inputs upfront, limited input 
+  flexibility)
+• Code Quality: -6 (no menu system, hardcoded path line 44 "C:/Users/Veer Pratap/.../metro_data.txt", 
+  limited error handling, crashes with IndexError on wrong time format lines 3-5, 
+  no try/except blocks, limited comments)
+• Bonus: -20 (no bonus features attempted)
+
+Key Achievement: REEVALUATED +24 marks from original 53/100. EXCELLENT journey planner 
+with sophisticated routing supporting same-line, single-interchange, AND double-interchange 
+journeys (23/25). Optimal route selection when multiple paths exist. Complete data 
+collection (80 stations: Blue1 50, Blue2 7, Magenta 25 = 20/20). Schedule logic 
+IMPLEMENTED with correct peak/off-peak and displays next metro + 3 subsequent times 
+(15/30). COMPREHENSIVE README with features, data sources, instructions, functions 
+explained, limitations (10/10 per guidelines). Professional time calculations with 
+proper service hours validation.
+
+Bonus Status: No bonus features attempted (0/20) - no additional lines, no fare 
+calculation, no extra features beyond base requirements.
+

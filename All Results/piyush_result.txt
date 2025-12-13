@@ -145,3 +145,21 @@ The nextrain() function has the main bug:
 
 RECOMMENDATION:
 Strong journey planner implementation shows good programming skills. Schedule logic needs debugging. More complete data collection needed. Overall solid work with some execution issues.
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -10 marks (Regular: 90/100, Bonus: 3/20, Total: 93/120)
+
+Breakdown:
+• Schedule Logic: -8 (timing bug in nextrain() function lines 76-98 - shows 
+  duplicate/incorrect times 09:21, 09:25 due to bidirectional calculation using 
+  same departure times, doesn't maintain proper 4-min peak intervals)
+• Journey Planner: -2 (minor - didn't fully test interchange journeys)
+• Code Quality: -3 (redundant code, some inefficient loops)
+• Bonus: -12 (fare calculator only works for two-interchange journeys, not 
+  implemented for same-line or one-interchange routes - partial credit 3/20)
+
+Key Achievement: REEVALUATED +14 marks from original 79/100. Complete data 
+collection (84 stations = 20/20). Excellent journey planner with station-by-station 
+output (23/25). TWO comprehensive PDF READMEs (10/10). Strong work with minor bugs.

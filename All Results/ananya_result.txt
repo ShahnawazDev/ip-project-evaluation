@@ -396,3 +396,19 @@ stronger testing and validation habits. The algorithm design shows promise.
 ===============================================================================
                                   END OF EVALUATION
 ===============================================================================
+
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -18 marks (Regular: 82/100, Bonus: 0/20, Total: 82/100)
+
+Breakdown:
+• Schedule Logic: -1 (time formatting - missing leading zeros in min_to_time())
+• Journey Planner: -15 (submitted untested code with critical logic bug on line 120: 
+  "if starting_line or" should be "if not starting_line or" - trivial fix proves 
+  code was never executed even once before submission)
+• Code Quality: -2 (logic typo on line 120 - same bug as above)
+• Bonus: -20 (no bonus features attempted)
+
+Key Issue: Logic typo on line 120 broke ALL journey planning. After one-line fix,
+everything works perfectly (would be 97/100 with testing). Heavy deduction for 
+submitting completely untested, non-functional code despite sound algorithm design.

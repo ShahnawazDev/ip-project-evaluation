@@ -203,3 +203,33 @@ Overall: Good working implementation with one structural flaw (no menu)
 4. Needs menu system and better testing
 
 The working journey planner saves the score from being very low.
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -33 marks (Regular: 82/100, Bonus: 5/20, Total: 87/120)
+
+Breakdown:
+• Data Collection: -3 (data hardcoded in Python lists and written to metro_data.txt 
+  at runtime lines 1-89, creates/overwrites file each run - poor practice)
+• Schedule Logic: -10 (metro_timing() function exists lines 155-169 with correct 
+  peak/off-peak 4min/8min logic and DISPLAYS output line 168, but NOT standalone 
+  module - no menu option for independent schedule queries, always embedded with 
+  journey planner line 169)
+• Journey Planner: -2 (minor spacing issue in time display "8 : 24" instead of "8:24")
+• Code Quality: -3 (no menu system - expects inputs upfront, data written at runtime, 
+  limited error handling beyond time validation)
+• Bonus: -15 (fare calculator attempted but COMPLETELY WRONG - shows Rs. 990 for 
+  Dwarka→Botanical Garden instead of ~Rs. 40-50, sums all fare column values 
+  incorrectly lines 140-150)
+
+Key Achievement: REEVALUATED +24 marks from original 58/100. Journey planner works 
+excellently for same-line and interchange (23/25). Smart bidirectional data approach 
+(reverse_data lines 132-135). Schedule logic EXISTS and works correctly with peak/off-peak. 
+Good pathfinding with proper interchange handling.
+
+Bonus Status: Fare calculator attempted (5/20) - fare_calculator() function implemented 
+but calculation fundamentally broken, adds fare value (11) for every station traversed 
+instead of proper distance/station-count based calculation. Shows attempt but incorrect 
+implementation. No additional lines attempted.
+

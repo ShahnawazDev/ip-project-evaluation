@@ -135,3 +135,25 @@ The code has skeleton definitions but no implementation:
 
 RECOMMENDATION:
 Student completed Phase 2 Part A (schedule logic) correctly but failed to complete Part B (journey planner). The code that exists is clean and functional. This appears to be a time management issue - student should have submitted partial journey planner implementation rather than leaving it completely undone. Honest about incompleteness but honesty doesn't substitute for completion.
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -32 marks (Regular: 68/100, Bonus: 0/15, Total: 68/100)
+
+Breakdown:
+• Journey Planner: -25 (INCOMPLETE - explicitly stated in code comments lines 71-164, 
+  skeleton functions defined but no logic implemented, student acknowledged incompleteness 
+  stating "THIS PART IS INCOMPLETE" and "pls run both codes seperatly")
+• Code Quality: -7 (no menu system - expects 3 inputs upfront, limited comments, 
+  no error handling for invalid inputs, doesn't validate station exists on line)
+• Bonus: -15 (no bonus features attempted)
+
+Key Achievement: Schedule logic PERFECT (30/30) with correct peak/off-peak 4min/8min 
+frequency, shows 3 subsequent trains. Complete data collection (79 stations: Blue 56, 
+Magenta 23 = 20/20). Comprehensive README with clear documentation (10/10). Clean code 
+for completed Part 1. Time management issue - submitted incomplete journey planner.
+
+Bonus Status: No bonus features attempted (0/15) - no additional lines, no fare 
+calculation, no extra features beyond base requirements.
+

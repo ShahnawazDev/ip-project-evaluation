@@ -488,3 +488,21 @@ Evaluator Notes: Scores adjusted based on actual functionality testing
 Previous evaluation underscored data collection and overestimated code quality
 Current evaluation more accurately reflects program's working state
 ========================================
+
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -32 marks (Regular: 53/100, Bonus: 15/20, Total: 68/100)
+
+Breakdown:
+• Schedule Logic: -30 (CRITICAL BUG line 366: UnboundLocalError - real_line 
+  used before definition on line 370, crashes immediately when option 1 selected)
+• Journey Planner: -10 (line 341 returns None instead of best_route_msg for 
+  interchange journeys, same-line works perfectly)
+• Code Quality: -7 (critical bugs -3, deliberate code obfuscation -4: meaningless 
+  "zero = 0" variables, dummy loops lines 151-153/255/305-306)
+• Bonus: -5 (2 additional lines + fare = 15/20, max possible is 20)
+
+Key Issues: Two 1-line fixes would resolve both bugs. Code obfuscation (dummy 
+loops, unused variables) raises academic integrity concerns. Only 25% functional 
+(same-line journeys work, schedule crashes, interchange returns None). With fixes: 
+potential 85-90/100.

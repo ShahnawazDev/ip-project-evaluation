@@ -188,3 +188,24 @@ The ride_plan() function inside q2() does all calculations correctly but returns
 
 RECOMMENDATION:
 Student clearly understands the problem and has working logic, but failed to properly integrate and test the complete system. The output bug is a critical oversight.
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -22 marks (Regular: 78/100, Bonus: 0/20, Total: 78/100)
+
+Breakdown:
+• Journey Planner: -20 (CRITICAL BUG #1: line 520 - q2() returns value but menu 
+  never prints it, causing NO OUTPUT -8; CRITICAL BUG #2: data structure mismatch 
+  - code references blue2-5 which don't exist in data file, only blue/blue1 exist, 
+  making most routes fail -7; awarded partial credit 5/25 for comprehensive 
+  ~280 lines of journey logic + good algorithmic thinking)
+• Code Quality: -7 (inconsistent style, redundant recursive functions, overly 
+  complex q2() function, lack of testing)
+• Bonus: -20 (no bonus features attempted)
+
+Key Issues: Two bugs prevent functionality - (1) missing print() statement for 
+q2() output, (2) blue2-5 arrays empty as data file only has blue/blue1. Schedule 
+logic PERFECT (30/30). Data collection EXCELLENT (236 stations, 9 lines = 20/20). 
+Strong algorithmic logic but catastrophic integration/testing failure. Untested code.
+

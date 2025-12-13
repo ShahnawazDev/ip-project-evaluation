@@ -360,3 +360,33 @@ Changes from original evaluation:
 - Total improvement: +26 points
 
 ========================================
+
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -23 marks (Regular: 77/100, Bonus: 10/20, Total: 87/120)
+
+Breakdown:
+• Schedule Logic: -15 (next_metro_time() function exists lines 15-42 with correct 
+  peak/off-peak 4min/8min logic and DISPLAYS output lines 101/172 showing next metro 
+  + 4 subsequent times lines 103-109, but NOT standalone module - no menu option for 
+  independent schedule queries, embedded in journey planner only)
+• Journey Planner: -2 (no menu system - goes directly to journey_planner(), limited 
+  error handling)
+• Code Quality: -6 (no menu system, poor variable names like G/l/st, limited comments, 
+  no input validation)
+• Bonus: -10 (fare calculator working but simplistic 0.5 rupees/min formula, Red line 
+  may not be 100% DMRC-accurate routing)
+
+Key Achievement: REEVALUATED +26 marks from original 61/120. Journey planner works 
+excellently for same-line and interchange across 3 lines (23/25). Schedule logic 
+IMPLEMENTED with peak/off-peak and displays next metro + 4 subsequent times (15/30). 
+Complete data collection (95 entries: Blue 46, Magenta 24, Red 25 = 20/20). TWO PDF 
+READMEs provided (10/10 per guidelines). Good pathfinding with proper interchange logic.
+
+Bonus Status: Fare calculator fully implemented (5/20) - formula: travel_time × 0.5 
+rupees per minute, not accurate to DMRC pricing but functional and reasonable, works 
+for same-line and interchange journeys. Red line complete (5/20) - 25 stations from 
+Rithala to Botanical Garden with travel times and interchange points, fully integrated 
+with journey planner, tested and working (though routing may be hybrid/fictional rather 
+than exact DMRC accuracy). Total bonus: 10/20.
+

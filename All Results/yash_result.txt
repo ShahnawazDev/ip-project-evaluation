@@ -303,3 +303,33 @@ Corrected scores:
 - Code Quality: 12→13 (+1)
 - Documentation: 8→10 (+2)
 Total improvement: +18 marks
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -24 marks (Regular: 76/100, Bonus: 7/20, Total: 83/120)
+
+Breakdown:
+• Schedule Logic: -20 (justnext() function exists lines 112-151 with complete 
+  peak/off-peak 4min/8min logic, service hours validation, edge case handling, but 
+  NOT exposed to user - only used internally at line 357 for interchange calculations, 
+  schedule display lines COMMENTED OUT lines 225/379, cannot query "next metro at 
+  station X" independently, no standalone module)
+• Journey Planner: -2 (no menu system - expects all inputs upfront: station, destination, 
+  time with no option selection)
+• Code Quality: -2 (no menu system, could be slightly more modular)
+• Bonus: -13 (no additional metro lines beyond required Blue/Magenta)
+
+Key Achievement: REEVALUATED +18 marks from original 65/120. VERY GOOD submission with 
+EXCELLENT error handling (case-insensitive station matching, time format validation with 
+ValueError, 24-hour format check - professional practices). Journey planner works 
+PERFECTLY for same-line and interchange (23/25) with sophisticated optimization (finds 
+all valid interchanges, selects shortest). Complete data (74 entries = 20/20). TWO 
+comprehensive READMEs (10/10 per guidelines). Clean 430-line code with good comments. 
+Complete route display with all stations listed. Among best error handling in class.
+
+Bonus Status: Fare calculator fully implemented (7/20) - integrated into journey output, 
+DMRC-style pricing based on number of stations traveled, shows "Fare for the trip in inr 
+is: 70", works for both same-line and interchange journeys. No additional metro lines 
+attempted. Total bonus: 7/20.
+

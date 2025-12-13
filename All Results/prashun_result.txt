@@ -171,3 +171,22 @@ Student shows strong understanding of graph algorithms, route planning, and sche
 CORRECTED EVALUATION:
 - Schedule Logic: 0→15 (+15 marks) for implemented logic that displays to user
 - Total: 59→74 (+15 marks)
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -26 marks (Regular: 74/100, Bonus: 0/20, Total: 74/100)
+
+Breakdown:
+• Data Collection: -3 (slightly incomplete network coverage)
+• Schedule Logic: -15 (check_gap() function correctly implements peak/off-peak 
+  4min/8min frequency and DISPLAYS next metro time to user at lines 175/210, but 
+  NOT exposed as standalone module - no menu option for independent schedule queries)
+• Journey Planner: -3 (uses non-standard 12-hour time format requiring AM/PM input)
+• Code Quality: -5 (hardcoded Mac absolute path "/Users/prashunjha/Downloads/...", 
+  no menu system - expects all inputs upfront)
+• Bonus: -20 (no bonus features attempted)
+
+Key Achievement: Strong BFS-based pathfinding with proper interchange handling 
+(10-min delay). Schedule logic IMPLEMENTED with correct peak/off-peak calculation 
+and displays output, but embedded in journey planner instead of standalone module.

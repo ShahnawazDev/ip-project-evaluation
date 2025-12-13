@@ -373,3 +373,27 @@ the corrected score of 103/120.
 ========================================
 END OF REEVALUATION REPORT
 ========================================
+
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -4 marks (Regular: 96/100, Bonus: 8/20, Total: 104/120)
+
+Breakdown:
+• Journey Planner: -2 (some code duplication for different line combinations, 
+  could use more generic routing algorithm instead of separate hardcoded cases)
+• Code Quality: -2 (text-based menu "Metro Timings Module" instead of numeric 
+  1/2 menu - stylistic choice not functional issue, minor code duplication)
+• Bonus: -12 (no fare calculator implemented)
+
+Key Achievement: REEVALUATED +7 marks from original 97/115. EXCELLENT submission 
+with comprehensive data collection (114 stations across 6 lines = 20/20). Schedule 
+logic PERFECT (30/30) with correct peak/off-peak 4min/8min frequency using professional 
+datetime module. Journey planner handles same-line, single-interchange, and double-
+interchange correctly (23/25). COMPREHENSIVE README with data sources, assumptions, 
+instructions, and program explanation (10/10 per guidelines). Clean 388-line code 
+with good modularization. Strong technical skills demonstrated.
+
+Bonus Status: Airport Express line complete (3/20) - 6 stations fully integrated. 
+Gray line complete (2/20) - 3 stations fully integrated. Green line complete (3/20) - 
+22 stations fully integrated. Total 3 additional complete lines beyond requirements, 
+all functional in journey planner. No fare calculator attempted. Total bonus: 8/20.

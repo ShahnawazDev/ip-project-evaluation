@@ -156,3 +156,22 @@ RECOMMENDATION:1214-line implementation. Journey planner works excellently for m
 REEVALUATION SUMMARY:
 Original score of 0/30 for Schedule Logic was too harsh. The predictor() function demonstrates complete understanding of schedule timing with correct peak/off-peak handling, first train calculations, and multi-line support. The program DISPLAYS this information to users. Awarding 20/30 (67%) - 10 marks for correct logic implementation, 10 marks for displaying schedule output, with 10 mark deduction for not implementing as standalone menu-accessible feature per Phase 2 requirements.
 Student shows strong commitment and thoroughness with extensive implementation. Journey planner works well for multiple lines and complex interchanges. However, needs to implement separate schedule timing module and use more efficient algorithms. Good bonus features implementation.
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -20 marks (Regular: 83/100, Bonus: 12/15, Total: 95/115)
+
+Breakdown:
+• Schedule Logic: -10 (predictor() function correctly calculates peak/off-peak 
+  4min/8min frequency and DISPLAYS metro arrival times to user, but NOT exposed as 
+  standalone module - no menu option for independent schedule queries per Phase 2)
+• Journey Planner: -1 (spurious "station not found" error despite continuing)
+• Code Quality: -5 (no menu system - expects all inputs upfront, 1214 lines with 
+  extensive repetition/hardcoded cases, could use graph algorithm instead)
+• Documentation: -1 (minor formatting issues)
+• Bonus: -3 (fare calculation simplistic - duration-based not distance-based per DMRC)
+
+Key Achievement: Extensive implementation with 4 lines (Blue, Magenta, Red, Yellow), 
+145 stations. Journey planner handles complex multi-interchange routing excellently. 
+Schedule logic IMPLEMENTED and displays output. Strong commitment shown with 1214 lines.

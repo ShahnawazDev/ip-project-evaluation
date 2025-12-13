@@ -348,3 +348,29 @@ Following precedent from Ananya's evaluation: "Heavy deduction for submitting un
 
 With proper testing, this would be a top-tier submission (95/100).
 Without testing, it receives 80/100 - recognizing the excellent schedule logic and data collection, but penalizing the journey planner for the critical bug.
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -20 marks (Regular: 80/100, Bonus: 0/15, Total: 80/100)
+
+Breakdown:
+• Journey Planner: -15 (CRITICAL BUG line 100: edges = [] should be edges = {}, 
+  TypeError crashes program before ANY journey planner execution. After 1-character 
+  fix, works perfectly for same-line and interchange journeys with sophisticated 
+  BFS-style graph algorithm. Heavy deduction for submitting untested code - trivial 
+  fix proves never ran complete program)
+• Code Quality: -5 (no menu system - expects all inputs upfront in sequence instead 
+  of menu options, limited error handling)
+• Bonus: -15 (no bonus features attempted)
+
+Key Achievement: REEVALUATED +25 marks from original 55/100. Schedule logic PERFECT 
+(30/30) - works WITHOUT any fixes, line 100 bug only affects journey planner. Complete 
+data collection (82 entries: Blue 57, Magenta 25 = 20/20). Comprehensive README (10/10 
+per guidelines). Sophisticated graph-based routing with adjacency list and bidirectional 
+travel. Excellent algorithm design and implementation. Fatal flaw: 1-character typo 
+proves lack of testing. With testing would score 95/100.
+
+Bonus Status: No bonus features attempted (0/15) - no additional lines, no fare 
+calculation, no extra features beyond base requirements.
+

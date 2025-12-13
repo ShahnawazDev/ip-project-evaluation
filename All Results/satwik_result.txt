@@ -415,3 +415,35 @@ After thorough re-evaluation and comprehensive testing:
 - Overall: Strong submission with one critical but easily fixable bug
 
 The revised score of 96/115 (84% regular + bonus) better reflects the actual quality and sophistication of the work.
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -17 marks (Regular: 86/100, Bonus: 12/15, Total: 98/115)
+
+Breakdown:
+• Schedule Logic: -2 (hardcoded path "C:\Users\LENOVO\Desktop\college\metro_data.txt" 
+  initially, fixed for testing - minor portability issue, otherwise EXCELLENT with 
+  bidirectional train display showing both directions, unique feature)
+• Journey Planner: -10 (CRITICAL BUG: IndexError caused by incomplete Orange line 
+  terminal definition - termm["orange"] only has 1 station instead of 2, crashes when 
+  twointer() function tries accessing terminals[1]. After 1-line fix adding second 
+  terminal, ALL functionality works perfectly. Core journey logic is sophisticated 
+  with same-line, single-interchange, and double-interchange routing. -10 for untested 
+  bonus feature that breaks core functionality)
+• Code Quality: -2 (hardcoded path, insufficient testing of bonus features)
+• Bonus: -3 (Orange line incomplete implementation causing crashes)
+
+Key Achievement: REEVALUATED +21 marks from original 77/100. EXCELLENT 4-option menu 
+system. Schedule logic perfect with unique bidirectional display (28/30). Sophisticated 
+journey planner with advanced twointer() double-interchange logic - works perfectly 
+after 1-line fix. Fully functional fare calculator with tiered pricing (5/5 bonus). 
+Video demo + 2 comprehensive PDF READMEs. Professional code with ~475 lines of 
+well-organized routing algorithms. Strong submission marred by untested bonus feature.
+
+Bonus Status: Red line fully implemented and working (5/5). Orange line attempted but 
+incomplete terminal definition causes IndexError (2/5 partial credit for effort - 7 
+stations in data but only 1 terminal defined). Fare calculator FULLY FUNCTIONAL (5/5) 
+- excellent tiered implementation (₹10/20/30/40/50 based on travel time), dedicated 
+menu option, clean output. Total bonus: 12/15.
+

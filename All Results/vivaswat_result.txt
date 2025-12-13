@@ -442,3 +442,35 @@ This submission demonstrates strong programming ability and good design thinking
 
 ========================================
 END OF REEVALUATION REPORT
+
+========================================
+MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
+-----------------------------------------------
+Total Deductions: -14 marks (Regular: 86/100, Bonus: 7/15, Total: 93/115)
+
+Breakdown:
+• Schedule Logic: -10 (CRITICAL BUG line 220: Blue line code incorrectly nested 
+  inside blue-vaishali elif block due to wrong indentation, makes entire Blue line 
+  schedule UNREACHABLE - elif will never execute when user enters "blue". Magenta 
+  and Blue-Vaishali work perfectly. Code logic is correct but placement wrong. 
+  Simple 1-level outdent would fix. Proves main Blue line not tested)
+• Journey Planner: -2 (no multi-hop interchange handling, only single interchange - 
+  minor limitation acceptable for assignment)
+• Code Quality: -2 (indentation bug on line 220 -1, no code comments throughout 
+  390-line file -1)
+• Bonus: -8 (no additional metro lines beyond required Blue/Magenta)
+
+Key Achievement: REEVALUATED +2 marks from original 91/115. STRONG submission with 
+EXCELLENT menu-driven interface (professional 4-option menu). Journey planner works 
+perfectly for same-line and interchange (23/25). Complete data collection (84 stations: 
+Blue 50, Blue-Vaishali 8, Magenta 26 = 20/20). TWO comprehensive READMEs (10/10 per 
+guidelines). Good function modularization with clean code structure (390 lines). 
+Schedule logic works for Magenta and Blue-Vaishali (20/30) but Blue line unreachable 
+due to indentation bug. 75% of code tested before submission.
+
+Bonus Status: Fare calculator fully implemented (7/15) - standalone menu option (good 
+design), accurate DMRC-style fare tiers (₹10/20/30/40/50/60 based on station count), 
+works for same-line and interchange journeys, professional implementation with 
+get_station_count() and calculate_fare() functions. No additional metro lines attempted. 
+Total bonus: 7/15.
+
