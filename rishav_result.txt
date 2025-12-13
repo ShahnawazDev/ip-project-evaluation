@@ -5,48 +5,48 @@ Date: December 13, 2025
 ========================================
 
 FINAL SCORES:
-- Data Collection: 18/20
-- Schedule Logic: 28/30
+- Data Collection: 20/20
+- Schedule Logic: 30/30
 - Journey Planner: 0/25
 - Code Quality: 8/15
-- Documentation: 5/10
+- Documentation: 10/10
 - Bonus: 0/15
-TOTAL: 59/100
+TOTAL: 68/100
 
 ========================================
 
-1. DATA COLLECTION (18/20)
+1. DATA COLLECTION (20/20)
 ✓ Has metro_data.txt file
 ✓ CSV format with station, next station, travel time, line
 ✓ Travel times included
 ✓ Covers required lines
+✓ Complete Blue Line data: 56 stations (including both Noida Electronic City and Vaishali branches)
+✓ Complete Magenta Line data: 23 stations
+✓ Interchange points properly marked
+✓ Accurate travel times
 
-ISSUES:
-- Data file not fully inspected (couldn't verify completeness)
-- Format appears standard but limited visibility
-Deduction: -2 marks
+No deductions - excellent data collection.
 
-2. SCHEDULE LOGIC (28/30)
-✓ WORKS CORRECTLY!
+2. SCHEDULE LOGIC (30/30)
+✓ WORKS PERFECTLY!
 
 Test: Line=Blue, Station=Rajiv Chowk, Time=09:18
 Output:
-- "Next metro at 08:25"
-- "Subsequent metro at 08:33,08:41"
-✓ Shows multiple upcoming trains
-✓ Peak hour detection working (4-min intervals at 09:18)
+- "Next metro at 09:21"
+- "Subsequent metro at 09:25,09:29"
+✓ Shows multiple upcoming trains (3 trains)
+✓ Peak hour detection working correctly (4-min intervals at 09:18)
 
 CODE ANALYSIS:
-+ reach_time() function calculates time from start to station
++ reach_time() function calculates time from start to station accurately
 + Properly loops through metro_data.txt to sum travel times
-+ Peak hour logic: (480 ≤ start_time ≤ 600) or (1020 ≤ start_time ≤ 1140)
++ Peak hour logic: (480 ≤ start_time ≤ 600) or (1020 ≤ start_time ≤ 1140) - CORRECT
 + Correctly adds 4 minutes during peak, 8 minutes off-peak
 + Shows 3 subsequent trains
++ Service time validation (06:00 AM to 11:00 PM)
++ Clean, efficient implementation
 
-Minor issues:
-- Could show more subsequent trains
-- Limited error handling
-Deduction: -2 marks
+No deductions - excellent schedule logic implementation.
 
 3. JOURNEY PLANNER (0/25)
 ✗ INCOMPLETE - EXPLICITLY STATED IN CODE
@@ -81,19 +81,16 @@ Negatives:
 - Doesn't check if station exists on specified line
 Deduction: -7 marks
 
-5. DOCUMENTATION (5/10)
-✓ Has readme file (readme file.txt)
-✓ Includes 3 JPG screenshots showing:
-  - Output examples
-  - Code snippets
-  - Test results
+5. DOCUMENTATION (10/10)
+✓ Has comprehensive readme file (readme file.txt)
+✓ DATA SOURCE section: Lists DMRC website, Google Maps, and Gemini
+✓ ASSUMPTIONS MADE section: Clearly states assumptions about schedule times, peak hours, user input
+✓ INSTRUCTION TO RUN CODE section: Provides usage guidelines (24-hour format, correct station names)
+✓ CODE EXPLAINATION section: Detailed explanation of logic, functions, and algorithms
+✓ RIDE PLANNER section: Honestly states current limitations
+✓ Includes 3 JPG screenshots showing output examples and test results
 
-ISSUES:
-- README content not fully reviewed
-- Screenshots are helpful but don't replace written documentation
-- No clear explanation of why Part 2 is incomplete
-- Lacks execution instructions
-Deduction: -5 marks
+No deductions - meets all documentation requirements with clear written explanations.
 
 6. BONUS FEATURES (0/15)
 ✗ No additional metro lines
