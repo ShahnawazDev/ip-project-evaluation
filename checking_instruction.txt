@@ -43,3 +43,4 @@ Full metro simulation with fare calculator, timing, etc: 20
 One additional line: 3 marks + 2 marks (If fare)
 If 50% line cover: 7 marks  + 3 marks (If fare)
 If 75% line cover: 11 marks  + 4 marks (If fare)
+If 100% line cover: 15 marks  + 5 marks (If fare) or multiple lines with fare calculation
