@@ -6,14 +6,14 @@ Reevaluation Date: December 13, 2025
 ========================================
 
 FINAL SCORES:
-- Data Collection: 17/20
+- Data Collection: 20/20
 - Schedule Logic: 20/30
 - Journey Planner: 23/25
 - Code Quality: 12/15
 - Documentation: 10/10
 - Bonus: 5/20
-TOTAL (Regular): 82/100
-TOTAL (With Bonus): 87/120
+TOTAL (Regular): 85/100
+TOTAL (With Bonus): 90/120
 
 ========================================
 

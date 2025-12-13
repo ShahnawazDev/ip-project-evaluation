@@ -11,7 +11,7 @@ FINAL SCORES:
 - Code Quality: 8/15
 - Documentation: 10/10
 - Bonus: 0/20
-TOTAL: 78/100
+TOTAL: 73/100
 
 ========================================
 

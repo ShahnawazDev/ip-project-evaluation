@@ -11,9 +11,9 @@ FINAL SCORES:
 - Journey Planner: 23/25 ✓ CORRECTED (was 22/25)
 - Code Quality: 13/15 ✓ CORRECTED (was 12/15)
 - Documentation: 10/10 ✓ CORRECTED (was 8/10)
-- Bonus: 8/20 ✓ SCALE CORRECTED (was 8/15)
+- Bonus: 10/20 ✓ SCALE CORRECTED (was 8/15)
 REGULAR TOTAL: 96/100
-TOTAL (with bonus): 104/120
+TOTAL (with bonus): 108/120
 
 ========================================
 

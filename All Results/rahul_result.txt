@@ -9,9 +9,9 @@ FINAL SCORES:
 - Schedule Logic: 20/30
 - Journey Planner: 24/25
 - Code Quality: 10/15
-- Documentation: 9/10
-- Bonus: 12/15
-TOTAL: 95/115
+- Documentation: 10/10
+- Bonus: 17/20
+TOTAL: 101/120
 
 ========================================
 
@@ -116,7 +116,7 @@ Minor issue:
 - Could use better formatting
 Deduction: -1 mark
 
-6. BONUS FEATURES (12/15)
+6. BONUS FEATURES (17/20)
 ✓ RED LINE: Complete implementation (5 marks)
 ✓ YELLOW LINE: Complete implementation (5 marks)
 ✓ FARE CALCULATION: Based on duration (2 marks)
@@ -160,7 +160,7 @@ Student shows strong commitment and thoroughness with extensive implementation. 
 ========================================
 MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
 -----------------------------------------------
-Total Deductions: -20 marks (Regular: 83/100, Bonus: 12/15, Total: 95/115)
+Total Deductions: -20 marks (Regular: 83/100, Bonus: 17/20, Total: 101/120)
 
 Breakdown:
 • Schedule Logic: -10 (predictor() function correctly calculates peak/off-peak 

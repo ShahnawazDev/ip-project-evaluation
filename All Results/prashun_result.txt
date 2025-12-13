@@ -5,18 +5,18 @@ Date: December 13, 2025
 ========================================
 
 FINAL SCORES:
-- Data Collection: 17/20
+- Data Collection: 20/20
 - Schedule Logic: 15/30
 - Journey Planner: 22/25
 - Code Quality: 10/15
 - Documentation: 10/10
 - Bonus: 0/20
-REGULAR TOTAL: 74/100
-TOTAL: 74/120
+REGULAR TOTAL: 77/100
+TOTAL: 77/120
 
 ========================================
 
-1. DATA COLLECTION (17/20)
+1. DATA COLLECTION (20/20)
 ✓ Blue-3 Line (main Blue Line)
 ✓ Blue-4 Line (Vaishali branch)
 ✓ Magenta Line complete
@@ -175,10 +175,9 @@ CORRECTED EVALUATION:
 ========================================
 MARKS DEDUCTION SUMMARY (FOR QUICK REFERENCE):
 -----------------------------------------------
-Total Deductions: -26 marks (Regular: 74/100, Bonus: 0/20, Total: 74/100)
+Total Deductions: -23 marks (Regular: 74/100, Bonus: 0/20, Total: 74/100)
 
 Breakdown:
-• Data Collection: -3 (slightly incomplete network coverage)
 • Schedule Logic: -15 (check_gap() function correctly implements peak/off-peak 
   4min/8min frequency and DISPLAYS next metro time to user at lines 175/210, but 
   NOT exposed as standalone module - no menu option for independent schedule queries)
